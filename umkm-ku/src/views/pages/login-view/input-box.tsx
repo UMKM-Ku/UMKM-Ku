@@ -9,7 +9,7 @@ export default function InputBox({
 }) {
   return (
     <>
-      <div className="relative w-full mt-3">
+      <form className="relative w-full mt-3">
         <input
           name={name}
           type={type}
@@ -24,7 +24,7 @@ export default function InputBox({
         >
           {label}
         </label>
-      </div>
+      </form>
     </>
   );
 }
