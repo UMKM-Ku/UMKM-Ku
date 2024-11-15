@@ -14,7 +14,7 @@ const DaftarLender1 = () => {
           alt="siapkanFile"
           className="mx-auto block w-96"
         />
-        <div className="flex gap-14 justify-center">
+        <div className="flex gap-10 justify-center mx-5">
           <button className="mt-4 rounded-lg p-2 px-12 text-accent-700 font-semibold border-accent-700 border-2">
             Beranda
           </button>
