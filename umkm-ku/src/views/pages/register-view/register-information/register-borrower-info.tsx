@@ -6,7 +6,7 @@ export default function RegisterBorrowerInformationView() {
   return (
     <>
       <section className="bg-white h-lvh">
-        <div className="h-lvh flex flex-col justify-center items-center">
+        <div className="h-lvh flex flex-col my-14 items-center">
           <RegisterInfoLabel
             tittle="Silahkan Siapkan Dokumen Yang Diperlukan"
             desc="Siapkan dokumen dibawah ini untuk proses verifikasi sebelum Anda siap untuk meminjam"

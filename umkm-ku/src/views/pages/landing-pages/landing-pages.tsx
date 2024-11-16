@@ -3,6 +3,7 @@ import Image from "next/image";
 import KeuntunganMenarik from "@/public/landing-pages/keuntungan-menarik.png";
 import PlatformAman from "@/public/landing-pages/platform-aman.png";
 import DukunganPenuh from "@/public/landing-pages/dukungan-penuh.png";
+import Link from "next/link";
 
 export default function LandingPages() {
   return (
@@ -31,9 +32,11 @@ export default function LandingPages() {
                 />
               </label>
             </div>
-            <button className="btn text-white bg-teal-700 hover:bg-teal-600">
-              Daftar sekarang
-            </button>
+            <Link href="/register/borrower">
+              <button className="btn text-white bg-teal-700 hover:bg-teal-600">
+                Daftar sekarang
+              </button>
+            </Link>
           </div>
         </div>
         <button className="btn btn-circle btn-outline">

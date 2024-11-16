@@ -1,4 +1,5 @@
-import InputBox from "../../login-view/input-box";
+import InputBox from "@/views/pages/login-view/input-box";
+import Link from "next/link";
 
 export default function RegisterBox({
   link,
@@ -15,21 +16,15 @@ export default function RegisterBox({
 }) {
   return (
     <>
-      <section className="w-lvw md:w-full md:h-lvh h-screen flex justify-center items-center bg-white">
+      <section className="w-lvw md:w-full md:h-fit h-screen flex bg-white">
         <div className="w-4/6">
-          <img
-            src="https://i.ibb.co.com/ThfCXmV/Group-18261.png"
-            alt="logo"
-            className="h-14 xl:-translate-y-4 md:-translate-y-28 md:mx-auto lg:mt-10 xl:mt-5 lg:-translate-y-36 cursor-pointer"
-          />
-
-          <div className="md:flex md:flex-col md:items-center md:mb-0 ">
+          <div className="md:flex md:flex-col md:items-center md:mb-0 my-12">
             <img
               src={link}
               alt="background"
               className="md:w-[60%] w-96 hidden md:block"
             />
-            <h5 className="md:text-base md:text-gray-600 text-center xl:mt-5 md:mt-0">
+            <h5 className="md:text-base md:text-gray-600 text-center md:mt-0">
               {desc1}
             </h5>
             <h5 className="text-gray-600 md:text-base text-center -mb-12 md:mb-0">
@@ -38,20 +33,23 @@ export default function RegisterBox({
           </div>
         </div>
 
-        <div className="w-2/6 bg-accent-100 h-lvh flex flex-col justify-center px-7">
+        <div className="w-2/6 bg-accent-100 h-screen flex flex-col pt-40 px-7">
           <h6 className="text-gray-800 font-bold text-3xl">{label1}</h6>
           <p className="text-gray-600 mt-2">{label2}</p>
           <InputBox name="email" type="text" label="Email" />
           <InputBox name="password" type="password" label="Password" />
           <button className="mt-4 bg-accent-700 rounded-lg p-2 text-white font-semibold hover:bg-accent-800 transition-colors duration-300 ease-out">
-            Register
+            Daftarkan Akun
           </button>
           <h6 className="text-gray-700 text-sm mt-2 text-center">
-            Already have account?
+            Sudah punya akun?
             <span>
-              <a href="" className="text-accent-700 font-semibold ml-1">
+              <Link
+                href="/login"
+                className="text-accent-700 font-semibold ml-1"
+              >
                 Login
-              </a>
+              </Link>
             </span>
           </h6>
         </div>

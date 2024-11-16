@@ -14,11 +14,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-
   title: "UMKM-ku",
   description: "Pendanaan & Investasi lebih inklusif untuk semua",
-
- 
+};
 
 export default function RootLayout({
   children,

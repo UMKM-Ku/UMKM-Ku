@@ -3,7 +3,7 @@ import InputLender from "./input-lender";
 const InformasiLender = () => {
   return (
     <>
-      <div className="md:w-6/12 md:mx-auto mt-28 mb-10 min-h-screen mx-9">
+      <div className="md:w-6/12 md:mx-auto mt-16 mb-10 min-h-screen mx-9">
         <div className="text-center">
           <h1 className="font-bold text-2xl">
             Informasi Diri Sebagai Pemberi Pinjaman (Lender)
@@ -43,7 +43,7 @@ const InformasiLender = () => {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="text-center mt-4 bg-accent-700 rounded-lg p-2 md:px-52 px-24 text-white font-semibold hover:bg-accent-800 transition-colors duration-300 ease-out"
+              className="text-center mt-6 bg-accent-700 rounded-lg p-2 md:px-52 px-24 text-white font-semibold hover:bg-accent-800 transition-colors duration-300 ease-out"
             >
               SIMPAN DATA
             </button>
