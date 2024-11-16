@@ -14,10 +14,11 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "UMKM-Ku",
-  description:
-    "UMKM-Ku membantu pertumbuhan UMKM di Indonesia dengan mempertemukan mereka dengan para investor. Dengan mengedepankan platform yang mudah digunakan dan kemudahan bertransaksi, platform P2P lending “UMKM-Ku” tidak hanya menguntungkan platform yang meraup keuntungan, tetapi juga konsumen yang mendapatkan imbal hasil dan suku bunga yang kompetitif. Oleh karena itu, pemberi pinjaman diberikan kebebasan untuk memilih dalam mendanai UMKM dengan tingkat risiko yang telah ditentukan. Peminjam juga berhak meminjam dana sesuai dengan ketentuan yang telah ditetapkan.",
-};
+
+  title: "UMKM-ku",
+  description: "Pendanaan & Investasi lebih inklusif untuk semua",
+
+ 
 
 export default function RootLayout({
   children,
