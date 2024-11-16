@@ -14,7 +14,7 @@ export default function InputBox({
           name={name}
           type={type}
           id={name}
-          className="px-2.5 py-2 w-full text-base text-gray-500 rounded-lg border-2 border-grey-600 appearance-none bg-white focus:outline-none focus:ring-0 focus:border-accent-700 peer"
+          className="px-2.5 py-2 w-full text-base text-gray-500 rounded-lg border-2 border-grey-600 appearance-none bg-accent-50 focus:outline-none focus:ring-0 focus:border-accent-700 peer"
           placeholder=""
         ></input>
 

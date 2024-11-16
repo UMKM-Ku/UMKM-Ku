@@ -1,4 +1,4 @@
-import InputBox from "../login-view/input-box";
+import InputBox from "../../login-view/input-box";
 
 export default function RegisterBox({
   link,
