@@ -14,9 +14,11 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+
   title: "UMKM-ku",
   description: "Pendanaan & Investasi lebih inklusif untuk semua",
-};
+
+ 
 
 export default function RootLayout({
   children,
@@ -28,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>
