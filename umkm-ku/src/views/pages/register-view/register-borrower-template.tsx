@@ -1,4 +1,4 @@
-import RegisterBox from "@/views/pages/register-view/register-box";
+import RegisterBox from "@/views/pages/register-view/components/register-box";
 
 export default function RegisterBorrowerTemplate() {
   return (
