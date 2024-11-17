@@ -167,6 +167,11 @@ export default function LandingPages() {
                 yang jelas dan transparan, tanpa harus menghadapi birokrasi yang
                 berbelit-belit.
               </p>
+              <Link href="register/borrower">
+                <button className="w-full sm:w-auto bg-accent-700 rounded-lg py-2 px-3 text-white font-medium text-sm hover:bg-accent-800 transition-colors duration-300 ease-out">
+                  Ajukan Pendanaan Sekarang
+                </button>
+              </Link>
             </div>
             <div className="w-full lg:w-1/2">
               <Image
@@ -202,6 +207,11 @@ export default function LandingPages() {
                 disesuaikan ini memungkinkan UMKM untuk fokus pada pengembangan
                 bisnis tanpa tekanan cicilan yang terlalu berat.
               </p>
+              <Link href="register/borrower">
+                <button className="w-full sm:w-auto bg-accent-700 rounded-lg py-2 px-3 text-white font-medium text-sm hover:bg-accent-800 transition-colors duration-300 ease-out">
+                  Danai Bisnis Anda Sekarang
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -220,6 +230,11 @@ export default function LandingPages() {
                 modal — anda mendapat dukungan nyata untuk pertumbuhan usaha
                 Anda.
               </p>
+              <Link href="register/borrower">
+                <button className="w-full sm:w-auto bg-accent-700 rounded-lg py-2 px-3 text-white font-medium text-sm hover:bg-accent-800 transition-colors duration-300 ease-out">
+                  Dapatkan Jaringan Investor
+                </button>
+              </Link>
             </div>
             <div className="w-full lg:w-1/2">
               <Image
@@ -257,6 +272,11 @@ export default function LandingPages() {
                 diri, mengetahui bahwa risiko telah dianalisis dengan baik oleh
                 platform.
               </p>
+              <Link href="register/lender">
+                <button className="w-full sm:w-auto bg-white rounded-lg border border-gray-200 py-2 px-3 text-black font-medium text-sm hover:bg-gray-100 transition-colors duration-300 ease-out">
+                  Investasi Sekarang
+                </button>
+              </Link>
             </div>
             <div className="w-full lg:w-1/2">
               <Image
@@ -293,6 +313,11 @@ export default function LandingPages() {
                 Investasi ini membantu menciptakan lapangan kerja baru,
                 meningkatkan taraf hidup, dan memberdayakan masyarakat sekitar.
               </p>
+              <Link href="register/lender">
+                <button className="w-full sm:w-auto bg-white rounded-lg border border-gray-200 py-2 px-3 text-black font-medium text-sm hover:bg-gray-100 transition-colors duration-300 ease-out">
+                  Mulai Beri Dampak Sosial Positif
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -313,6 +338,11 @@ export default function LandingPages() {
                 potensi pertumbuhan bisnis, memberikan fleksibilitas dalam
                 pengelolaan investasi.
               </p>
+              <Link href="register/lender">
+                <button className="w-full sm:w-auto bg-white rounded-lg border border-gray-200 py-2 px-3 text-black font-medium text-sm hover:bg-gray-100 transition-colors duration-300 ease-out">
+                  Mulai Danai Bisnis Lokal
+                </button>
+              </Link>
             </div>
             <div className="w-full lg:w-1/2">
               <Image
