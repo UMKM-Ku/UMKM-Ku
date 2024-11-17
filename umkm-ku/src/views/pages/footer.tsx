@@ -3,72 +3,60 @@ export default function Footer() {
     <>
       <footer className="bg-teal-600 text-white">
         <div className="max-w-7xl mx-auto py-12 px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Branding */}
-            <div className="col-span-1">
-              <h3 className="text-xl font-bold mb-4">UMKM-Ku</h3>
-              <p className="text-sm">
-                Website untuk membantu UMKM yang membutuhkan modal dan
-                memberikan solusi.
+          <div className="grid grid-cols-1 md:grid-cols-7 gap-2">
+            <div className="md:col-span-4 col-span-1">
+              <img
+                src="https://i.imgur.com/Httb8oJ.png"
+                alt="logo"
+                className="h-16"
+              />
+              <p className="text-sm md:pr-36">
+                Berikan dampak langsung pada pertumbuhan ekonomi lokal dengan
+                mendanai UMKM yang membutuhkan modal untuk berembang.
               </p>
             </div>
 
-            {/* Quick Links */}
             <div className="col-span-1">
-              <h3 className="text-lg font-semibold mb-4">Pusat Bantuan</h3>
+              <h3 className="text-lg font-semibold mb-4">Beranda Borrower</h3>
               <ul className="space-y-2">
                 <li>
                   <a href="/syarat" className="text-sm hover:underline">
-                    Syarat
+                    Status Angsuran
                   </a>
                 </li>
                 <li>
                   <a href="/faq" className="text-sm hover:underline">
-                    FAQ
-                  </a>
-                </li>
-                <li>
-                  <a href="/tentang-kami" className="text-sm hover:underline">
-                    Tentang Kami
-                  </a>
-                </li>
-                <li>
-                  <a href="/contact" className="text-sm hover:underline">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Information */}
-            <div className="col-span-1">
-              <h3 className="text-lg font-semibold mb-4">Informasi</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="/berita-terkini" className="text-sm hover:underline">
                     Berita Terkini
                   </a>
                 </li>
+              </ul>
+            </div>
+
+            <div className="col-span-1">
+              <h3 className="text-lg font-semibold mb-4">Pendanaan Saya</h3>
+              <ul className="space-y-2">
                 <li>
-                  <a href="/media" className="text-sm hover:underline">
-                    Media
+                  <a
+                    href="/borrower/list-pendanaan"
+                    className="text-sm hover:underline"
+                  >
+                    List Pendanaan
                   </a>
                 </li>
               </ul>
             </div>
 
-            {/* Portfolio */}
             <div className="col-span-1">
-              <h3 className="text-lg font-semibold mb-4">Portfolio</h3>
+              <h3 className="text-lg font-semibold mb-4">Beranda</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="/usaha" className="text-sm hover:underline">
-                    Usaha
+                  <a href="/" className="text-sm hover:underline">
+                    Landing Page
                   </a>
                 </li>
                 <li>
-                  <a href="/dana" className="text-sm hover:underline">
-                    Dana
+                  <a href="/our-team" className="text-sm hover:underline">
+                    Tentang Kami
                   </a>
                 </li>
               </ul>
