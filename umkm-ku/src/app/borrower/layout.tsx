@@ -1,5 +1,5 @@
-import Footer from "@/views/pages/footer";
-import Navbar from "@/views/pages/navbar";
+import Footer from "@/views/pages/borrower-view/footer-borrower";
+import Navbar from "@/views/pages/borrower-view/navbar-borrower";
 
 export default function BorrowerLayout({
   children,

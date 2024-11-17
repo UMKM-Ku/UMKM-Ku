@@ -4,15 +4,9 @@ import InputBox from "./input-box";
 export default function LoginTemplate() {
   return (
     <>
-      <section className="w-lvw md:w-full md:h-lvh h-screen flex justify-center items-center bg-white">
+      <section className="w-lvw md:w-full md:h-fit h-screen flex bg-white">
         <div className="w-4/6">
-          <img
-            src="https://i.ibb.co.com/ThfCXmV/Group-18261.png"
-            alt="logo"
-            className="h-14 xl:-translate-y-4 md:-translate-y-28 md:mx-auto lg:mt-10 xl:mt-5 lg:-translate-y-36 cursor-pointer"
-          />
-
-          <div className="md:flex md:flex-col md:items-center md:mb-0 ">
+          <div className="md:flex md:flex-col md:items-center md:mb-0 my-12">
             <img
               src="https://i.imgur.com/Nrroar6.png"
               alt="background"
@@ -27,7 +21,7 @@ export default function LoginTemplate() {
           </div>
         </div>
 
-        <div className="w-2/6 bg-accent-100 h-lvh flex flex-col justify-center px-7">
+        <div className="w-2/6 bg-accent-100 h-screen flex flex-col pt-40 px-7">
           <h6 className="text-gray-800 font-bold text-3xl">Login</h6>
           <p className="text-gray-600 mt-2">
             Silahkan masukkan email dan password
