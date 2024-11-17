@@ -1,7 +1,12 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 export default function Navbar() {
+  const path = usePathname();
   return (
     <>
-      <nav className="bg-white p-4 flex justify-between items-center text-gray-600">
+      <nav className="bg-white p-4 flex justify-between items-center text-gray-600 border-b-2">
         <div className="flex items-center space-x-4 gap-4">
           <img
             src="https://i.ibb.co.com/ThfCXmV/Group-18261.png"
@@ -14,14 +19,25 @@ export default function Navbar() {
             alt="Workflow"
           />
         </div>
-        <div className="hidden md:flex space-x-6">
-          <a href="#" className="hover:underline">
-            Home
+        <div className="hidden md:flex space-x-6 text-gray-500 font-semibold">
+          <a
+            href="/borrower"
+            className={`hover:underline ${
+              path === "/borrower" && "text-accent-700"
+            }`}
+          >
+            Beranda
           </a>
-          <a href="#" className="hover:underline">
-            Lender
+          <a
+            href="/list-pendanaan"
+            className={`hover:underline ${
+              path === "/list-pendanaan" && "text-accent-700"
+            }`}
+          >
+            List Pendanaan
           </a>
         </div>
+
         <div className="dropdown dropdown-end mt-2">
           <div
             tabIndex={0}
@@ -35,18 +51,39 @@ export default function Navbar() {
               />
             </div>
           </div>
+
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-3 w-52 p-2 shadow text-gray-600"
+            className="menu menu-sm dropdown-content bg-white rounded-md z-[1] mt-3 w-fit py-2 px-5 shadow text-gray-600 border-2"
           >
-            <li>
-              <a className="justify-between">Profile</a>
+            <li className="border-b">
+              <a className="justify-between hover:text-accent-700 duration-300 ease-out transition-colors">
+                Profil
+              </a>
             </li>
-            <li>
-              <a>Settings</a>
+            <li className="border-b">
+              <a className="justify-between hover:text-accent-700 duration-300 ease-out transition-colors">
+                Pengaturan
+              </a>
             </li>
-            <li>
-              <a>Logout</a>
+            <li className="border-b lg:border-none hover:text-accent-700 duration-300 ease-out transition-colors">
+              <a>Keluar</a>
+            </li>
+            <li className="border-b">
+              <a
+                href="/borrower"
+                className="justify-between hover:text-accent-700 duration-300 ease-out transition-colors block lg:hidden"
+              >
+                Beranda
+              </a>
+            </li>
+            <li className="border-b">
+              <a
+                href="/list-pendanaan"
+                className="justify-between hover:text-accent-700 duration-300 ease-out transition-colors block lg:hidden"
+              >
+                List Pendanaan
+              </a>
             </li>
           </ul>
         </div>

@@ -3,7 +3,7 @@ export default function BorrowerCardNews() {
     <>
       <div className="flex flex-col items-center gap-4 px-6 ">
         {/* News Card */}
-        <div className="flex bg-white shadow-lg rounded-lg overflow-hidden p-4 w-[80%]">
+        <div className="flex bg-white shadow-lg rounded-lg overflow-hidden p-4 w-[80%] border-2">
           <img
             src="https://via.placeholder.com/100"
             alt="News Image"
@@ -21,7 +21,7 @@ export default function BorrowerCardNews() {
           </div>
         </div>
         {/* Repeat News Card */}
-        <div className="flex bg-white shadow-lg rounded-lg overflow-hidden w-[80%] p-4">
+        <div className="flex bg-white shadow-lg rounded-lg overflow-hidden w-[80%] p-4 border-2">
           <img
             src="https://via.placeholder.com/100"
             alt="News Image"
