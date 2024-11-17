@@ -6,6 +6,7 @@ import DukunganPenuh from "@/public/landing-pages/dukungan-penuh.png";
 import Link from "next/link";
 import LandingNavigation from "./landing-navigation";
 import PlaceholderImage from "@/public/landing-pages/placeholder-img.png";
+import UserTestimonials from "./testimonials";
 
 export default function LandingPages() {
   return (
@@ -328,62 +329,7 @@ export default function LandingPages() {
 
       {/* Testimonial Section */}
       <div className="flex flex-col py-16 md:py-24 lg:py-32 px-4 md:px-16 lg:px-32 bg-white items-center">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 line-clamp-2 pb-10 lg:pb-20 text-center">
-          Apa kata mereka yang telah bergabung dengan UMKM-ku
-        </h1>
-
-        {/* Testimonial Cards Container */}
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6 w-full">
-          {/* You can add testimonial cards here. Example structure: */}
-          <div className="flex flex-col gap-4 p-6 rounded-lg border border-gray-200 shadow-sm">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-gray-200"></div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800">
-                  Nama Pengguna
-                </h3>
-                <p className="text-sm text-gray-600">Role / Posisi</p>
-              </div>
-            </div>
-            <p className="text-sm text-gray-600">
-              "Testimonial text goes here. This is a placeholder for actual user
-              testimonials."
-            </p>
-          </div>
-
-          {/* Repeat testimonial cards as needed */}
-          <div className="flex flex-col gap-4 p-6 rounded-lg border border-gray-200 shadow-sm">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-gray-200"></div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800">
-                  Nama Pengguna
-                </h3>
-                <p className="text-sm text-gray-600">Role / Posisi</p>
-              </div>
-            </div>
-            <p className="text-sm text-gray-600">
-              "Testimonial text goes here. This is a placeholder for actual user
-              testimonials."
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-4 p-6 rounded-lg border border-gray-200 shadow-sm">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-gray-200"></div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800">
-                  Nama Pengguna
-                </h3>
-                <p className="text-sm text-gray-600">Role / Posisi</p>
-              </div>
-            </div>
-            <p className="text-sm text-gray-600">
-              "Testimonial text goes here. This is a placeholder for actual user
-              testimonials."
-            </p>
-          </div>
-        </div>
+        <UserTestimonials />
       </div>
     </div>
   );
