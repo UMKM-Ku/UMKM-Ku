@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function NavbarLender() {
@@ -8,11 +9,13 @@ export default function NavbarLender() {
     <>
       <nav className="bg-white p-4 flex justify-between items-center text-gray-600 border-b-2">
         <div className="flex items-center space-x-4 gap-4">
-          <img
-            src="https://i.ibb.co.com/ThfCXmV/Group-18261.png"
-            alt="UMKM-Ku Logo"
-            className="h-12 cursor-pointer"
-          />
+          <Link href={"/"}>
+            <img
+              src="https://i.ibb.co.com/ThfCXmV/Group-18261.png"
+              alt="UMKM-Ku Logo"
+              className="h-12 cursor-pointer"
+            />
+          </Link>
           <img
             className="h-12 cursor-pointer"
             src="https://upload.wikimedia.org/wikipedia/commons/8/83/OJK_Logo.png"

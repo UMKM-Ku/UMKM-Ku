@@ -6,12 +6,9 @@ import {
   IoIosArrowDroprightCircle,
 } from "react-icons/io";
 
-function CarouselHome() {
+function CarouselHome({ slide }: { slide: string[] }) {
   const [current, setCurent] = useState(0);
-  const slide = [
-    "https://i.imgur.com/JZjhhdW.png",
-    "https://i.imgur.com/pyQxQCe.png",
-  ];
+
   const prevSlide = () => {
     if (current === 0) setCurent(slide.length - 1);
     else setCurent(current - 1);

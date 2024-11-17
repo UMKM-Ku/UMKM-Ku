@@ -1,7 +1,7 @@
 export default function BorrowerCardNews() {
   return (
     <>
-      <div className="flex flex-col items-center gap-4 px-6 ">
+      <div className="flex flex-col items-center gap-4  ">
         {/* News Card */}
         <div className="flex bg-white shadow-lg rounded-lg overflow-hidden p-4 w-[80%] border-2">
           <img
@@ -10,7 +10,7 @@ export default function BorrowerCardNews() {
             className="w-24 h-24 object-cover rounded-lg"
           />
           <div className="ml-4">
-            <p className="text-xl text-gray-400 ">WEDNESDAY</p>
+            <p className="text-lg text-gray-400 ">WEDNESDAY</p>
             <h3 className="text-md font-semibold">Tahun 2024 UMKM naik 4%?</h3>
             <p className="text-gray-600 text-sm mt-2">
               Dalam penemuan di Jawa Timur para dok...{" "}

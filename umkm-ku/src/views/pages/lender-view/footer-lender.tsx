@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function FooterLender() {
   return (
     <>
@@ -5,11 +7,13 @@ export default function FooterLender() {
         <div className="max-w-7xl mx-auto py-12 px-4">
           <div className="grid grid-cols-1 md:grid-cols-7 gap-2">
             <div className="md:col-span-4 col-span-1">
-              <img
-                src="https://i.imgur.com/Httb8oJ.png"
-                alt="logo"
-                className="h-16"
-              />
+              <Link href={"/"}>
+                <img
+                  src="https://i.imgur.com/Httb8oJ.png"
+                  alt="logo"
+                  className="h-16"
+                />
+              </Link>
               <p className="text-sm md:pr-36">
                 Berikan dampak langsung pada pertumbuhan ekonomi lokal dengan
                 mendanai UMKM yang membutuhkan modal untuk berembang.
