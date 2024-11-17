@@ -1,26 +1,79 @@
 import React from "react";
+// import Image from "next/image";
 
-const CardMarketplace = () => {
+const CardMarketplace = ({
+  name,
+  description,
+  amount,
+  tenor,
+  profitSharing,
+  crowdfundingProgress,
+  daysLeft,
+  imageSrc,
+}: {
+  name: string;
+  description: string;
+  amount: string;
+  tenor: string;
+  profitSharing: string;
+  crowdfundingProgress: number;
+  daysLeft: number;
+  imageSrc: string;
+}) => {
   return (
     <>
-      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-7">
-        <a href="#">
+      <div className="relative md:min-w-80  rounded-lg shadow-lg border border-gray-200 bg-white overflow-hidden m-7 ">
+        <div className="relative h-48">
           <img
-            className="rounded-t-lg"
-            src="/docs/images/blog/image-1.jpg"
-            alt=""
+            src={imageSrc}
+            alt="Funding card image"
+            className="absolute inset-0 w-full h-full object-cover"
           />
-        </a>
-        <div className="p-5">
-          <a href="#">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Noteworthy technology acquisitions 2021
-            </h5>
-          </a>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
-          </p>
+          <div className="absolute top-2 left-2 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded-md">
+            {daysLeft} Hari lagi
+          </div>
+        </div>
+
+        <div className="p-4 bg-white rounded-tl-3xl -mt-6 relative z-10">
+          <div className="flex items-center space-x-2">
+            <div className="avatar placeholder">
+              <div className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center">
+                A
+              </div>
+            </div>
+
+            <div>
+              <p className="font-bold text-lg">{name}</p>
+              <p className="text-sm text-accent-700">{description}</p>
+            </div>
+          </div>
+
+          <div className="mt-4 text-sm">
+            <div className="flex justify-between">
+              <span>Modal</span>
+              <span className="font-semibold">{amount}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Tenor</span>
+              <span className="font-semibold">{tenor}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Bagi Hasil</span>
+              <span className="font-semibold">{profitSharing}</span>
+            </div>
+          </div>
+          <div className="mt-4">
+            <p className="text-sm font-medium text-accent-700">Crowdfunding</p>
+            <div className="w-full bg-accent-400 rounded-full h-2">
+              <div
+                className="bg-accent-700 h-2 rounded-full"
+                style={{ width: `${crowdfundingProgress}%` }}
+              ></div>
+            </div>
+            <p className="text-right text-sm text-gray-500 mt-1">
+              {crowdfundingProgress}%
+            </p>
+          </div>
         </div>
       </div>
     </>
