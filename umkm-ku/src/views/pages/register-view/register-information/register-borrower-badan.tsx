@@ -4,7 +4,7 @@ export default function RegisterBorrowerBadan() {
   return (
     <>
       <RegisterInfoLabel
-        tittle="Selamat Datang Calon Penerima Pinjaman (Borrower)"
+        tittle="Selamat Datang Calon Penerima Pendanaan"
         desc="Silahkan pilih Anda mendaftar sebagai Badan Usaha Individu atau Badan Usaha Institusi"
       />
     </>

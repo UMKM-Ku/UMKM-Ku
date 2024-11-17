@@ -3,15 +3,15 @@ import RegisterBorrowerBadan from "../register-information/register-borrower-bad
 export default function RegisterBorrowerBadanTemplate() {
   return (
     <>
-      <section className="bg-white h-lvh">
-        <div className="h-lvh flex flex-col my-32 items-center">
+      <section className="bg-white min-h-screen">
+        <div className="min-h-screen flex flex-col items-center my-32 px-6">
           <RegisterBorrowerBadan />
 
-          <div className="flex gap-7 items-center border-2 py-7 px-6 rounded-md shadow-md mt-7 w-3/6 cursor-pointer hover:border-accent-700 hover:border-2 duration-300 ease-out transition-colors">
+          <div className="flex flex-col sm:flex-row gap-7 items-center border-2 py-7 px-6 rounded-md shadow-md mt-7 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 cursor-pointer hover:border-accent-700 hover:border-2 duration-300 ease-out transition-colors">
             <img
               src="https://i.imgur.com/KfDjX98.png"
               alt="icon"
-              className="size-10"
+              className="w-12 h-12 sm:w-16 sm:h-16"
             />
             <div>
               <h4 className="text-gray-600 font-semibold">
@@ -24,11 +24,11 @@ export default function RegisterBorrowerBadanTemplate() {
             </div>
           </div>
 
-          <div className="flex gap-3 items-center border-2 p-4 rounded-md shadow-md mt-7 w-3/6 cursor-pointer hover:border-accent-700 hover:border-2 duration-300 ease-out transition-colors ">
+          <div className="flex flex-col sm:flex-row gap-3 items-center border-2 p-4 rounded-md shadow-md mt-7 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 cursor-pointer hover:border-accent-700 hover:border-2 duration-300 ease-out transition-colors">
             <img
               src="https://i.imgur.com/2xbbHeS.png"
               alt="icon"
-              className="size-16"
+              className="w-16 h-16 sm:w-20 sm:h-20"
             />
             <div>
               <h4 className="text-gray-600 font-semibold">

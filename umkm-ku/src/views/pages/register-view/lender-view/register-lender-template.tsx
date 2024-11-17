@@ -8,7 +8,7 @@ export default function RegisterLenderTemplate() {
         desc1="Berikan dampak langsung pada pertumbuhan ekonomi lokal dengan mendanai"
         desc2="UMKM yang membutuhkan modal untuk berkembang."
         label1="Register Lender"
-        label2="Buat akun untuk mengakses sebagai peminjam dana"
+        label2="Buat akun untuk mengakses sebagai pemberi pendanaan"
       />
     </>
   );

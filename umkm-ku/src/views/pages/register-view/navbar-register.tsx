@@ -21,7 +21,7 @@ export default function NavbarRegisterBorrower({ role }: { role: string }) {
           <h6 className="font-bold text-md mt-2.5 text-accent-700">{role}</h6>
         </div>
 
-        <div className="flex gap-5 items-center text-gray-600 font-semibold mt-2 pr-4 cursor-pointer">
+        <div className="md:flex gap-5 items-center text-gray-600 font-semibold mt-2 pr-4 cursor-pointer  hidden">
           <Link
             href={"/"}
             className="hover:text-accent-700 duration-300 ease-out transition-colors"

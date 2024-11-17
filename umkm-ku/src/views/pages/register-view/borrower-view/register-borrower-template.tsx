@@ -8,7 +8,7 @@ export default function RegisterBorrowerTemplate() {
         desc1="Para pemberi dana sedang menunggu anda untuk membantu mendanai"
         desc2="para UMKM yang membutuhkan modal untuk berkembang."
         label1="Register Borrower"
-        label2="Buat akun untuk mengakses sebagai peminjam dana"
+        label2="Buat akun untuk mengakses sebagai penerima pendanaan"
       />
     </>
   );

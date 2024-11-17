@@ -12,7 +12,7 @@ export default function FooterRegister() {
             Pendanaan & Investasi lebih inklusif untuk semua
           </h6>
         </div>
-        <h6 className="text-sm">Copyright @2024, UMKM-Ku</h6>
+        <h6 className="md:text-sm text-xs">Copyright @2024, UMKM-Ku</h6>
       </footer>
     </>
   );
