@@ -1,16 +1,16 @@
 export default function BorrowerCardNews() {
   return (
     <>
-      <div className="flex flex-col items-center gap-4 px-6">
+      <div className="flex flex-col items-center gap-4 px-6 ">
         {/* News Card */}
-        <div className="flex bg-white shadow-lg rounded-lg overflow-hidden w-full md:w-2/3 lg:w-1/2 p-4">
+        <div className="flex bg-white shadow-lg rounded-lg overflow-hidden p-4 w-[80%]">
           <img
             src="https://via.placeholder.com/100"
             alt="News Image"
             className="w-24 h-24 object-cover rounded-lg"
           />
           <div className="ml-4">
-            <p className="text-xs text-gray-400">WEDNESDAY</p>
+            <p className="text-xl text-gray-400 ">WEDNESDAY</p>
             <h3 className="text-md font-semibold">Tahun 2024 UMKM naik 4%?</h3>
             <p className="text-gray-600 text-sm mt-2">
               Dalam penemuan di Jawa Timur para dok...{" "}
@@ -21,14 +21,14 @@ export default function BorrowerCardNews() {
           </div>
         </div>
         {/* Repeat News Card */}
-        <div className="flex bg-white shadow-lg rounded-lg overflow-hidden w-full md:w-2/3 lg:w-1/2 p-4">
+        <div className="flex bg-white shadow-lg rounded-lg overflow-hidden w-[80%] p-4">
           <img
             src="https://via.placeholder.com/100"
             alt="News Image"
             className="w-24 h-24 object-cover rounded-lg"
           />
           <div className="ml-4">
-            <p className="text-xs text-gray-400">WEDNESDAY</p>
+            <p className="text-xl text-gray-400">WEDNESDAY</p>
             <h3 className="text-md font-semibold">
               UMKM Diera digital apa itu?
             </h3>
@@ -41,7 +41,7 @@ export default function BorrowerCardNews() {
           </div>
         </div>
         {/* Button for More News */}
-        <button className="btn btn-outline btn-primary mt-4">
+        <button className="mt-4 bg-accent-700 rounded-lg p-2 px-12 text-white font-semibold hover:bg-accent-800 transition-colors duration-300 ease-out">
           Lihat berita lain
         </button>
       </div>

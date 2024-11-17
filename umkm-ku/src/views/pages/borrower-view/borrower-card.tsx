@@ -3,14 +3,14 @@ export default function BorrowerCard() {
     <>
       <div className="flex flex-wrap justify-center gap-8 px-6">
         {/* Card 1 */}
-        <div className="flex flex-col md:flex-row gap-4 bg-white shadow-lg rounded-lg overflow-hidden w-full md:w-2/5 lg:w-1/3 p-4">
+        <div className="flex flex-col md:flex-row gap-4 bg-white shadow-lg rounded-lg overflow-hidden w-[80%] p-4">
           <img
             src="https://via.placeholder.com/100"
             alt="Cow Image"
             className="w-24 h-24 object-cover rounded-lg"
           />
           <div className="flex-1">
-            <h3 className="text-lg font-semibold">Pendanaan Pakan Sapi</h3>
+            <h3 className="text-xl font-semibold">Pendanaan Pakan Sapi</h3>
             <p className="text-gray-600 text-sm mt-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non
               augue nec ligula.
