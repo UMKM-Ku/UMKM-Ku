@@ -1,5 +1,5 @@
-import Footer from "@/views/pages/footer";
-import Navbar from "@/views/pages/navbar";
+import FooterLender from "@/views/pages/lender-view/footer-lender";
+import NavbarLender from "@/views/pages/lender-view/navbar-lender";
 
 export default function BorrowerLayout({
   children,
@@ -9,9 +9,9 @@ export default function BorrowerLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="antialiased">
-        <Navbar />
+        <NavbarLender />
         <main>{children}</main>
-        <Footer />
+        <FooterLender />
       </body>
     </html>
   );
