@@ -4,13 +4,15 @@ import KeuntunganMenarik from "@/public/landing-pages/keuntungan-menarik.png";
 import PlatformAman from "@/public/landing-pages/platform-aman.png";
 import DukunganPenuh from "@/public/landing-pages/dukungan-penuh.png";
 import Link from "next/link";
-import LandingNavigation from "./landing-navigation";
 import PlaceholderImage from "@/public/landing-pages/placeholder-img.png";
 import UserTestimonials from "./testimonials";
+import LandingNavigation from "./landing-navigation";
+import FooterLandingPage from "./footer-landing-pages";
 
 export default function LandingPages() {
   return (
     <div className="flex flex-col w-screen">
+      <LandingNavigation />
       {/* // Hero Section */}
       <div className="flex py-8 md:py-16 lg:py-28 px-4 md:px-16 lg:px-32">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-14 items-center">
@@ -273,7 +275,7 @@ export default function LandingPages() {
                 platform.
               </p>
               <Link href="register/lender">
-                <button className="w-full sm:w-auto bg-white rounded-lg border border-gray-200 py-2 px-3 text-black font-medium text-sm hover:bg-gray-100 transition-colors duration-300 ease-out">
+                <button className="w-full sm:w-auto bg-accent-700 rounded-lg py-2 px-3 text-white font-medium text-sm hover:bg-accent-800 transition-colors duration-300 ease-out">
                   Investasi Sekarang
                 </button>
               </Link>
@@ -314,7 +316,7 @@ export default function LandingPages() {
                 meningkatkan taraf hidup, dan memberdayakan masyarakat sekitar.
               </p>
               <Link href="register/lender">
-                <button className="w-full sm:w-auto bg-white rounded-lg border border-gray-200 py-2 px-3 text-black font-medium text-sm hover:bg-gray-100 transition-colors duration-300 ease-out">
+                <button className="w-full sm:w-auto bg-accent-700 rounded-lg py-2 px-3 text-white font-medium text-sm hover:bg-accent-800 transition-colors duration-300 ease-out">
                   Mulai Beri Dampak Sosial Positif
                 </button>
               </Link>
@@ -339,7 +341,7 @@ export default function LandingPages() {
                 pengelolaan investasi.
               </p>
               <Link href="register/lender">
-                <button className="w-full sm:w-auto bg-white rounded-lg border border-gray-200 py-2 px-3 text-black font-medium text-sm hover:bg-gray-100 transition-colors duration-300 ease-out">
+                <button className="w-full sm:w-auto bg-accent-700 rounded-lg py-2 px-3 text-white font-medium text-sm hover:bg-accent-800 transition-colors duration-300 ease-out">
                   Mulai Danai Bisnis Lokal
                 </button>
               </Link>
@@ -361,6 +363,7 @@ export default function LandingPages() {
       <div className="flex flex-col py-16 md:py-24 lg:py-32 px-4 md:px-16 lg:px-32 bg-white items-center">
         <UserTestimonials />
       </div>
+      <FooterLandingPage />
     </div>
   );
 }
