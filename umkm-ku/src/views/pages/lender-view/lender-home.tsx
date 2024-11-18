@@ -31,9 +31,7 @@ export default function LenderHome() {
               </div>
               <div className="md:flex md:flex-col md:items-start md:justify-center">
                 <h4 className="text-lg font-semibold">Saldoku</h4>
-                <h4 className="text-accent-700 font-semibold text-lg">
-                  Rp. 120.000,00
-                </h4>
+                <h4 className="text-accent-700 font-semibold text-lg">Rp. 0</h4>
               </div>
             </div>
             <button
@@ -53,7 +51,7 @@ export default function LenderHome() {
                 <FaMoneyBills className="text-6xl" />
                 <div>
                   <h6>Dana yang bisa ditarik</h6>
-                  <h6>Rp.50.000</h6>
+                  <h6>Rp.0</h6>
                 </div>
               </div>
               {/* Keuntungan */}
@@ -61,7 +59,7 @@ export default function LenderHome() {
                 <GiProfit className="text-6xl" />
                 <div>
                   <h6>Keuntungan</h6>
-                  <h6>Rp.50.000</h6>
+                  <h6>Rp.0</h6>
                 </div>
               </div>
               {/* Pendanaan UMKM */}
@@ -69,7 +67,7 @@ export default function LenderHome() {
                 <AiFillFund className="text-6xl" />
                 <div>
                   <h6>Pendanaan UMKM</h6>
-                  <h6>Rp.50.000</h6>
+                  <h6>0</h6>
                 </div>
               </div>
             </div>
