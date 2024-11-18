@@ -29,7 +29,7 @@ export default function NavbarRegisterBorrower({ role }: { role: string }) {
             Beranda
           </Link>
           <Link
-            href={"/about-us"}
+            href={"/our-team"}
             className="hover:text-accent-700 duration-300 ease-out transition-colors"
           >
             Tentang Kami
