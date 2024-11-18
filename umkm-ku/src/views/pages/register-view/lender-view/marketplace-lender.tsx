@@ -7,7 +7,7 @@ const MarketplaceLender = () => {
       <div className="md:flex gap-28">
         <aside
           id="sidebar-multi-level-sidebar"
-          className="overflow-auto w-64 min-h-screen transition-transform  sm:translate-x-0 m-8"
+          className="overflow-auto w-64 md:min-h-screen transition-transform  sm:translate-x-0 m-8"
           aria-label="Sidebar"
         >
           <div className="h-full px-3 py-4 ">
@@ -29,6 +29,9 @@ const MarketplaceLender = () => {
               labelOne="Perdagangan"
               labelTwo="Pertanian"
               labelThree="Peternakan"
+              labelFour="Tesktil"
+              labelFive="Farmasi"
+              labelSix="Food and Beverage"
             />
             <FilterCheckbox
               title="Bagi Hasil"
@@ -39,7 +42,7 @@ const MarketplaceLender = () => {
           </div>
         </aside>
         <div>
-          <div className="grid md:grid-cols-2 gap-x-16 mt-10">
+          <div className="grid md:grid-cols-2 gap-x-16 mt-16">
             <CardMarketplace
               name="Mulyono"
               description="Modal beli pakan"

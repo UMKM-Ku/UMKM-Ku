@@ -29,9 +29,6 @@ const CardMarketplace = ({
             alt="Funding card image"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          {/* <div className="absolute top-2 left-2 bg-red-600 text-white text-sm font-semibold px-3 py-2 rounded-md">
-            {daysLeft} Hari lagi
-          </div> */}
           <div className="bg-red-600 ribbon-2 text-white text-sm font-semibold">
             2 Hari lagi
           </div>
