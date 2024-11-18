@@ -1,4 +1,4 @@
-import InputLender from "./input-lender";
+import InputForm from "../../public-view/input-form";
 
 const InformasiLender = () => {
   return (
@@ -13,25 +13,26 @@ const InformasiLender = () => {
           </p>
         </div>
         <form className="my-10">
-          <InputLender label="Nama Lengkap *" name="namaLengkap" type="text" />
-          <InputLender
-            label="No Handphone *"
-            name="noHandphone"
-            type="number"
-          />
-          <InputLender label="No Rekening *" name="noRekening" type="number" />
-          <InputLender label="Foto KTP *" name="fotoKTP" type="file" />
+          <InputForm label="Nama Lengkap *" name="namaLengkap" type="text" />
+          <InputForm label="No Handphone *" name="noHandphone" type="number" />
+          <InputForm label="No Rekening *" name="noRekening" type="number" />
+          <InputForm label="Foto KTP *" name="fotoKTP" type="file" />
           <div className="ms-3">
-            <h2 className="font-bold text-lg my-3">Persyaratan</h2>
-            <div>
-              <input type="checkbox" id="privasi" name="privasi" />
-              <label htmlFor="privasi" className="text-gray-500 text-sm">
-                {" "}
-                Saya menyatakan telah membaca dan setuju dengan Kebijakan
-                Privasi & Syarat Ketentuan yang ada.
+            <h2 className="font-bold text-lg mt-3">Persyaratan</h2>
+            <div className="flex gap-2">
+              <input
+                type="checkbox"
+                id="privasi"
+                name="privasi"
+                className="mb-2.5"
+              />
+              <label htmlFor="privasi" className="text-gray-500 text-sm mt-2">
+                Dengan ini, saya menyatakan setuju untuk mengunggah data pribadi
+                saya ke platform ini dan memahami bahwa data yang diunggah akan
+                digunakan sesuai dengan kebijakan privasi yang berlaku.
               </label>
             </div>
-            <div>
+            <div className="flex gap-2 mt-3">
               <input type="checkbox" id="privasi" name="privasi" />
               <label htmlFor="privasi" className="text-gray-500 text-sm">
                 {" "}

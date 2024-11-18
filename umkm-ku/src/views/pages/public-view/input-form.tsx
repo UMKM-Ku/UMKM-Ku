@@ -1,4 +1,4 @@
-const InputLender = ({
+const InputForm = ({
   type,
   name,
   label,
@@ -24,4 +24,4 @@ const InputLender = ({
   );
 };
 
-export default InputLender;
+export default InputForm;
