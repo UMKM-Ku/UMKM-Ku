@@ -16,7 +16,7 @@ export default function Footer() {
               </Link>
               <p className="text-sm md:pr-36">
                 Berikan dampak langsung pada pertumbuhan ekonomi lokal dengan
-                mendanai UMKM yang membutuhkan modal untuk berembang.
+                mendanai UMKM yang membutuhkan modal untuk berkembang.
               </p>
             </div>
 

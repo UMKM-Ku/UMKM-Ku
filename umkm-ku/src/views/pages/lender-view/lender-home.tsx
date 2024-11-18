@@ -30,7 +30,7 @@ export default function LenderHome() {
                 <GiWallet className="text-white text-5xl" />
               </div>
               <div className="md:flex md:flex-col md:items-start md:justify-center">
-                <h4 className="text-lg font-semibold">Saldoku</h4>
+                <h4 className="text-lg font-semibold text-gray-600">Saldoku</h4>
                 <h4 className="text-accent-700 font-semibold text-lg">Rp. 0</h4>
               </div>
             </div>
@@ -44,7 +44,9 @@ export default function LenderHome() {
 
           {/* Asetku */}
           <div className="p-8 gap-5 border-2 w-full md:w-[70%] rounded-md items-center">
-            <h6 className="text-lg font-semibold border-b-2 pb-2">Asetku</h6>
+            <h6 className="text-lg font-semibold border-b-2 pb-2 text-gray-600">
+              Asetku
+            </h6>
             <div className="my-10 text-lg flex flex-col md:flex-row justify-between">
               {/* Dana yang bisa ditarik */}
               <div className="text-gray-600 items-center flex gap-3 mb-5 md:mb-0">
@@ -76,7 +78,9 @@ export default function LenderHome() {
       </section>
 
       {/* Berita Terkini Section */}
-      <h2 className="text-center text-2xl font-bold my-8 ">BERITA TERKINI</h2>
+      <h2 className="text-center text-2xl font-bold my-8 text-gray-600">
+        BERITA TERKINI
+      </h2>
       <BorrowerCardNews />
       <div className="w-full flex flex-col items-center justify-center my-10">
         <LenderFaq />

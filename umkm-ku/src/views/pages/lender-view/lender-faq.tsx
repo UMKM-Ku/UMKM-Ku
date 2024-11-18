@@ -2,7 +2,7 @@ export default function LenderFaq() {
   return (
     <>
       <div className="w-[80%]">
-        <h1 className="text-2xl font-bold mb-3">Pusat Bantuan</h1>
+        <h1 className="text-2xl font-bold mb-3 text-gray-600">Pusat Bantuan</h1>
         <div className="collapse bg-base-200 border-2 collapse-arrow rounded-tr-md rounded-tl-md rounded-none">
           <input type="checkbox" />
           <div className="collapse-title text-lg text-gray-700 font-medium">
