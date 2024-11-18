@@ -4,11 +4,7 @@ import FilterCheckbox from "./filter-checkbox";
 const MarketplaceLender = () => {
   return (
     <>
-<<<<<<< HEAD:umkm-ku/src/views/pages/register-view/lender-view/marketplace-lender.tsx
-      <div className="md:flex gap-28 mt-24">
-=======
       <div className="md:flex gap-28 mt-16">
->>>>>>> 7d8b6e38532b5931f0d6ac534bcb31a563af9e8b:umkm-ku/src/views/pages/lender-view/marketplace-view/marketplace-lender.tsx
         <aside
           id="sidebar-multi-level-sidebar"
           className="overflow-auto w-64 md:min-h-screen transition-transform  sm:translate-x-0 m-8"
