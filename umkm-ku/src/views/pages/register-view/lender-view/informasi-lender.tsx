@@ -2,6 +2,7 @@ import ButtonForm from "../../public-view/button-form";
 import InputForm from "../../public-view/input-form";
 import PersyaratanForm from "../../public-view/persyaratan-form";
 
+
 const InformasiLender = () => {
   return (
     <>
@@ -21,6 +22,7 @@ const InformasiLender = () => {
           <InputForm label="Foto KTP *" name="fotoKTP" type="file" />
           <PersyaratanForm />
           <ButtonForm />
+
         </form>
       </div>
     </>

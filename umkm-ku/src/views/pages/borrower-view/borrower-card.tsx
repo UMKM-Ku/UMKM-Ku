@@ -24,7 +24,7 @@ export default function BorrowerCard() {
           </div>
         </div>
         {/* Info for Card 1 */}
-        <div className="flex flex-col gap-2 bg-white shadow-lg rounded-lg w-full md:w-1/4 lg:w-1/5 p-4 border-2">
+        <div className="flex flex-col gap-2 bg-white shadow-lg rounded-lg w-full md:w-1/4 lg:w-1/5 p-4 border-2 text-gray-600">
           <div className="flex justify-between">
             <span className="font-bold">Total Pinjaman</span>
             <span>Rp. 1.000.000</span>

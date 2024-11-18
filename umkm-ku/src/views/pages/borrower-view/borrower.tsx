@@ -18,10 +18,14 @@ export default function BorrowerPage() {
       </section>
 
       {/* Status Angsuran Section */}
-      <h2 className="text-center text-2xl font-bold my-8  ">STATUS ANGSURAN</h2>
+      <h2 className="text-center text-2xl font-bold my-8 text-gray-600">
+        STATUS ANGSURAN
+      </h2>
       <BorrowerCard />
       {/* Berita Terkini Section */}
-      <h2 className="text-center text-2xl font-bold my-8 ">BERITA TERKINI</h2>
+      <h2 className="text-center text-gray-600 text-2xl font-bold my-8 ">
+        BERITA TERKINI
+      </h2>
       <BorrowerCardNews />
       <div className="w-full flex flex-col items-center justify-center my-10">
         <BorrowerFaq />
