@@ -8,7 +8,7 @@ export default function LandingNavigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="relative bg-white border-b border-gray-100">
+    <nav className="bg-white border-gray-300 border-b-2 fixed w-full">
       {/* Desktop Navigation */}
       <div className="flex justify-between items-center px-4 md:px-8 py-3">
         {/* Logo and Main Nav */}
@@ -37,7 +37,7 @@ export default function LandingNavigation() {
               href="/our-team"
               className="text-gray-700 font-medium text-sm px-3 h-full hover:bg-gray-100 rounded-lg py-4"
             >
-              Our Team
+              Tentang Kami
             </Link>
           </div>
         </div>

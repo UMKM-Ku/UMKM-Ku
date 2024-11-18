@@ -14,7 +14,7 @@ export default function LenderHome() {
   return (
     <>
       {/* Header Banner */}
-      <section className="w-[80%] h-[29%] mx-auto mt-5 flex gap-3 ">
+      <section className="w-[80%] h-[29%] mx-auto mt-28 flex gap-3 ">
         <div className=" w-[100%] h-fit rounded-lg shadow-md group mt-5">
           <CarouselHome slide={slide} />
         </div>

@@ -11,7 +11,7 @@ export default function BorrowerPage() {
   return (
     <>
       {/* Header Banner */}
-      <section className="w-[80%] h-[29%] mx-auto mt-5 flex gap-3 ">
+      <section className="w-[80%] h-[29%] mx-auto mt-32 flex gap-3 ">
         <div className=" w-[100%] h-fit rounded-lg shadow-md group">
           <CarouselHome slide={slide} />
         </div>
