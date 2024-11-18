@@ -26,9 +26,9 @@ const FilterCheckbox = ({
           <FilterBox label={labelOne} />
           <FilterBox label={labelTwo} />
           <FilterBox label={labelThree} />
-          {labelFour && labelFive && labelSix ? (
+          {labelFour ? <FilterBox label={labelFour} /> : ""}
+          {labelFive && labelSix ? (
             <>
-              <FilterBox label={labelFour} />
               <FilterBox label={labelFive} />
               <FilterBox label={labelSix} />
             </>

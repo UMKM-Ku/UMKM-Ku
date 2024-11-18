@@ -17,6 +17,7 @@ const MarketplaceLender = () => {
               labelOne="A"
               labelTwo="B"
               labelThree="C"
+              labelFour="D"
             />
             <FilterCheckbox
               title="Tenor"
