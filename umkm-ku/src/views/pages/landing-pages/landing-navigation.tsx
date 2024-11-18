@@ -8,7 +8,7 @@ export default function LandingNavigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white border-gray-300 border-b-2 fixed w-full">
+    <nav className="bg-white border-gray-300 border-b-2 fixed w-full z-10">
       {/* Desktop Navigation */}
       <div className="flex justify-between items-center px-4 md:px-8 py-3">
         {/* Logo and Main Nav */}
