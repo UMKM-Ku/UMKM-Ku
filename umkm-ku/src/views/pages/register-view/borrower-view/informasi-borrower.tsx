@@ -20,6 +20,7 @@ const InformasiBorrower = () => {
         <InputForm label="No Handphone *" name="noHandphone" type="number" />
         <InputForm label="No Rekening *" name="noRekening" type="number" />
         <InputForm label="Foto KTP *" name="fotoKTP" type="file" />
+        <InputForm label="NPWP *" name="npwp" type="file" />
         <PersyaratanForm />
         <ButtonForm />
       </form>
