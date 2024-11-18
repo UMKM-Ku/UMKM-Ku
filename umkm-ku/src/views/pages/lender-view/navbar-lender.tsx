@@ -7,7 +7,7 @@ export default function NavbarLender() {
   const path = usePathname();
   return (
     <>
-      <nav className="bg-white p-4 flex justify-between items-center text-gray-600 border-b-2 fixed w-full z-10 top-0 border-gray-300">
+      <nav className="bg-white p-4 flex justify-between items-center text-gray-600 border-b-2 fixed w-full z-20 top-0 border-gray-300">
         <div className="flex items-center space-x-4 gap-4">
           <Link href={"/"}>
             <img

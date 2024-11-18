@@ -22,7 +22,7 @@ const CardMarketplace = ({
 }) => {
   return (
     <>
-      <div className="relative md:min-w-80  rounded-lg shadow-lg border border-gray-200 bg-white overflow-hidden m-7 ">
+      <div className="relative md:min-w-80  rounded-lg shadow-lg border border-gray-200 bg-white overflow-hidden m-7">
         <div className="relative h-48">
           <img
             src={imageSrc}
