@@ -1,4 +1,4 @@
-import MarketplaceLender from "@/views/pages/register-view/lender-view/marketplace-lender";
+import MarketplaceLender from "@/views/pages/lender-view/marketplace-view/marketplace-lender";
 
 export default function Marketplace() {
   return (
