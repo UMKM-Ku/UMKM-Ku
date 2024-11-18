@@ -1,6 +1,7 @@
 import ButtonForm from "../../public-view/button-form";
 import InputForm from "../../public-view/input-form";
 import PersyaratanForm from "../../public-view/persyaratan-form";
+import TextAreaForm from "../../public-view/textarea-form";
 
 const InformasiBorrower = () => {
   return (
@@ -15,6 +16,7 @@ const InformasiBorrower = () => {
       </div>
       <form className="my-10">
         <InputForm label="Nama Lengkap *" name="namaLengkap" type="text" />
+        <TextAreaForm label="Alamat *" name="alamat" />
         <InputForm label="No Handphone *" name="noHandphone" type="number" />
         <InputForm label="No Rekening *" name="noRekening" type="number" />
         <InputForm label="Foto KTP *" name="fotoKTP" type="file" />
