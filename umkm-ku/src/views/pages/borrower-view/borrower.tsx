@@ -8,6 +8,7 @@ export default function BorrowerPage() {
     "https://i.imgur.com/JZjhhdW.png",
     "https://i.imgur.com/pyQxQCe.png",
   ];
+
   return (
     <>
       {/* Header Banner */}
@@ -22,6 +23,7 @@ export default function BorrowerPage() {
         STATUS ANGSURAN
       </h2>
       <BorrowerCard />
+
       {/* Berita Terkini Section */}
       <h2 className="text-center text-gray-600 text-2xl font-bold my-8 ">
         BERITA TERKINI

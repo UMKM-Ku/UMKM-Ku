@@ -31,36 +31,6 @@ export default function OurTeam() {
             github="https://github.com/julioandarestu"
           />
           <CardTeam
-            link="/foto/irwan.jpg"
-            nama="Irwan Bachtiar"
-            job="Prod-Man"
-            hidden="hidden"
-            quote="Saya Tidak Cukup Muda Untuk Mengetahui Segalanya."
-            linkedin="https://www.linkedin.com/in/irwan-bachtiar-514125263/"
-            github="https://github.com/irwanbachtiar4"
-          />
-          <CardTeam
-            link="/foto/diana.png"
-            nama="Diana Novita"
-            job="Prod-Man"
-            hidden="hidden"
-            quote="Tetaplah tenang karena kedamaian sama dengan kekuatan."
-            linkedin="https://www.linkedin.com/in/irwan-bachtiar-514125263/"
-            github="https://github.com/irwanbachtiar4"
-          />
-        </div>
-
-        <div className="flex justify-center gap-16 mb-10">
-          <CardTeam
-            link="/foto/bram.jpg"
-            nama="Brahmantyo Setyadji"
-            job="Prod-Man"
-            hidden="hidden"
-            quote="Sesuatu yang kau impikan tampak mustahil, sampai kamu mencapainya."
-            linkedin="https://www.linkedin.com/in/brahmantyo-setyadji-priambodo-8445541a1/"
-            github="https://github.com/BrahmantyoSP"
-          />
-          <CardTeam
             link="/foto/ferdi.jpeg"
             nama="Hafidh Ferdiansyah"
             job="UI/UX"
@@ -77,6 +47,36 @@ export default function OurTeam() {
             quote="Hanya dibutuhkan 1 lagu untuk membawa kembali seribu kenangan."
             linkedin="https://www.linkedin.com/in/novanmanday/"
             github="https://github.com/novanmasriandi11"
+          />
+        </div>
+
+        <div className="flex justify-center gap-16 mb-10">
+          <CardTeam
+            link="/foto/bram.jpg"
+            nama="Brahmantyo Setyadji"
+            job="Prod-Man"
+            hidden="hidden"
+            quote="Sesuatu yang kau impikan tampak mustahil, sampai kamu mencapainya."
+            linkedin="https://www.linkedin.com/in/brahmantyo-setyadji-priambodo-8445541a1/"
+            github="https://github.com/BrahmantyoSP"
+          />
+          <CardTeam
+            link="/foto/irwan.jpg"
+            nama="Irwan Bachtiar"
+            job="Prod-Man"
+            hidden="hidden"
+            quote="Saya Tidak Cukup Muda Untuk Mengetahui Segalanya."
+            linkedin="https://www.linkedin.com/in/irwan-bachtiar-514125263/"
+            github="https://github.com/irwanbachtiar4"
+          />
+          <CardTeam
+            link="/foto/diana.png"
+            nama="Diana Novita"
+            job="Prod-Man"
+            hidden="hidden"
+            quote="Tetaplah tenang karena kedamaian sama dengan kekuatan."
+            linkedin="https://www.linkedin.com/in/irwan-bachtiar-514125263/"
+            github="https://github.com/irwanbachtiar4"
           />
         </div>
 
