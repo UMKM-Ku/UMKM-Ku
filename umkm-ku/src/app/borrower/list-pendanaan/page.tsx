@@ -1,5 +1,6 @@
 import BorrowerCard from "@/views/pages/borrower-view/borrower-card";
 import CarouselHome from "@/views/pages/borrower-view/carousel";
+import Link from "next/link";
 import { FaNotesMedical } from "react-icons/fa6";
 
 export default function ListPendanaan() {
@@ -21,7 +22,9 @@ export default function ListPendanaan() {
 
           <div className="bg-accent-700 text-white rounded-lg px-4 py-2 flex items-center gap-2 font-semibold hover:bg-accent-800 duration-300 ease-out transition-colors">
             <FaNotesMedical className="text-xl" />
-            <button>Ajukan Pendanaan</button>
+            <Link href={"/borrower/list-pendanaan/ajukan-pendanaan"}>
+              <button>Ajukan Pendanaan</button>
+            </Link>
           </div>
         </div>
         <section>

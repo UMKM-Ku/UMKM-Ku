@@ -1,7 +1,7 @@
 export default function BorrowerCard() {
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-8  w-[90%] mx-auto">
+      <div className="flex flex-wrap justify-center gap-8 mt-8 w-[90%] mx-auto">
         {/* Card 1 */}
         <div className="flex flex-col md:flex-row gap-4 bg-white shadow-lg rounded-lg overflow-hidden p-4 md:w-4/6 border-2 items-center">
           <img
