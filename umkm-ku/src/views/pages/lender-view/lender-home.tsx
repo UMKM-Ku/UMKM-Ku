@@ -1,4 +1,4 @@
-import BorrowerCardNews from "../borrower-view/borrower-card-news";
+import BorrowerCardNews from "../borrower-view/card-news";
 import LenderFaq from "./lender-faq";
 import CarouselHome from "../borrower-view/carousel";
 import { GiWallet } from "react-icons/gi";
