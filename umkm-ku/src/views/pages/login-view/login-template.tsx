@@ -1,40 +1,49 @@
 import Link from "next/link";
 import InputBox from "./input-box";
-// import { getCookies } from "cookies-next";
-
 import { jwtDecode } from "jwt-decode";
+import { redirect } from "next/navigation";
+
+interface TokenPayload {
+  id: number;
+  email: string;
+  role: string;
+  iat: number;
+  exp: number;
+}
+
+const handleLogin = async (FormData: FormData) => {
+  "use server";
+
+  const input = {
+    email: FormData.get("email"),
+    password: FormData.get("password"),
+  };
+
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_API_URL}/auth/login`,
+    {
+      method: "POST",
+      body: JSON.stringify(input),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  if (!response.ok) throw Error("Error adding data");
+
+  const token: string | undefined = response.headers
+    .get("set-cookie")
+    ?.split("=")[1]
+    .split(";")[0];
+
+  if (token) {
+    const decoded = jwtDecode<TokenPayload>(token);
+    decoded.role === "Borrower" ? redirect("/borrower") : redirect("/lender");
+  }
+};
+
 export default function LoginTemplate() {
-  // const fetchData = async (FormData: FormData) => {
-  //   "use server";
-
-  //   const input = {
-  //     name: FormData.get("email"),
-  //     image: FormData.get("password"),
-  //   };
-
-  //   const response = await fetch(
-  //     `${process.env.NEXT_PUBLIC_API_URL}/auth/login`,
-  //     {
-  //       method: "POST",
-  //       body: JSON.stringify(input),
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //     }
-  //   );
-
-  //   if (!response.ok) throw Error("Error adding data");
-  //   // const getCookies = (options: OptionsType) => {
-  //   //   getCookies({"access_token"});
-  //   // };
-  // };
-
-  const token =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im11bHlvbm9pbmRvbmVzaWFAZ21haWwuY29tIiwicm9sZSI6IkJvcnJvd2VyIiwiaWF0IjoxNzMyMDI4NjI1LCJleHAiOjE3MzIwMzIyMjV9.yVA4wafXfRpiOAgvczCWmHWNyv7JckpdHOIbxnQrjR4";
-  const decoded = jwtDecode(token);
-
-  console.log(decoded);
-
   return (
     <>
       <section className="w-full md:w-full h-screen md:h-fit flex flex-col md:flex-row bg-white">
@@ -62,13 +71,17 @@ export default function LoginTemplate() {
             {" "}
             Silahkan masukkan email dan password
           </p>
+          <form action={handleLogin}>
+            <InputBox name="email" type="text" label="Email" />
+            <InputBox name="password" type="password" label="Password" />
 
-          <InputBox name="email" type="text" label="Email" />
-          <InputBox name="password" type="password" label="Password" />
-
-          <button className="mt-4 bg-accent-700 rounded-lg p-2 text-white font-semibold hover:bg-accent-800 transition-colors duration-300 ease-out">
-            Masuk
-          </button>
+            <button
+              type="submit"
+              className="mt-4 bg-accent-700 rounded-lg p-2 text-white font-semibold hover:bg-accent-800 transition-colors duration-300 ease-out"
+            >
+              Masuk
+            </button>
+          </form>
 
           <h6 className="text-gray-700 text-sm mt-2 text-center">
             Tidak punya akun?
