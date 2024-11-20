@@ -42,7 +42,10 @@ export default function RegisterBox({
           <InputBox name="email" type="text" label="Email" />
           <InputBox name="password" type="password" label="Password" />
 
-          <button className="mt-4 bg-accent-700 rounded-lg p-2 text-white font-semibold hover:bg-accent-800 transition-colors duration-300 ease-out">
+          <button
+            type="submit"
+            className="mt-4 bg-accent-700 rounded-lg p-2 text-white font-semibold hover:bg-accent-800 transition-colors duration-300 ease-out"
+          >
             Daftarkan Akun
           </button>
 

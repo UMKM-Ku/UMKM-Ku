@@ -3,7 +3,7 @@ import InformasiInstitusi from "@/views/pages/register-view/borrower-view/inform
 export default function FormInstitusi() {
   return (
     <>
-      <InformasiInstitusi />
+      <InformasiInstitusi badanUsaha="institusi" />
     </>
   );
 }

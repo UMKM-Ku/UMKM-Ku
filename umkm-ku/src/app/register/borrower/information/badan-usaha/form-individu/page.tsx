@@ -3,7 +3,7 @@ import InformasiBorrower from "@/views/pages/register-view/borrower-view/informa
 export default function FormIndividu() {
   return (
     <>
-      <InformasiBorrower />
+      <InformasiBorrower badanUsaha="individu" />
     </>
   );
 }
