@@ -2,6 +2,7 @@ import Link from "next/link";
 import InputBox from "./input-box";
 import { jwtDecode } from "jwt-decode";
 import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
 
 interface TokenPayload {
   id: number;
@@ -31,11 +32,18 @@ const handleLogin = async (FormData: FormData) => {
   );
 
   if (!response.ok) throw Error("Error Login");
+  const data = await response.json();
 
-  const token: string | undefined = response.headers
-    .get("set-cookie")
-    ?.split("=")[1]
-    .split(";")[0];
+  const token: string = data.access_token;
+
+  cookies().set("access_token", token, {
+    httpOnly: true,
+    secure: true,
+    sameSite: "strict",
+  });
+
+  const accessToken = cookies().get("access_token")?.value.split(".")[0];
+  console.log("Access Token:", accessToken);
 
   if (token) {
     const decoded = jwtDecode<TokenPayload>(token);
