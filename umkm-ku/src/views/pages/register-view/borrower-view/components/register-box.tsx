@@ -38,10 +38,10 @@ export default function RegisterBox({
             {label1}
           </h6>
           <p className="text-gray-600 mt-2 text-sm md:text-base">{label2}</p>
-
-          <InputBox name="email" type="text" label="Email" />
-          <InputBox name="password" type="password" label="Password" />
-
+          <div className="flex flex-col gap-3.5 mt-3.5">
+            <InputBox name="email" type="text" label="Email" />
+            <InputBox name="password" type="password" label="Password" />
+          </div>
           <button
             type="submit"
             className="mt-4 bg-accent-700 rounded-lg p-2 text-white font-semibold hover:bg-accent-800 transition-colors duration-300 ease-out"

@@ -30,8 +30,8 @@ const handleLogin = async (FormData: FormData) => {
     }
   );
 
-  if (!response.ok) throw Error("Error adding data");
-  
+  if (!response.ok) throw Error("Error Login");
+
   const token: string | undefined = response.headers
     .get("set-cookie")
     ?.split("=")[1]
@@ -44,7 +44,6 @@ const handleLogin = async (FormData: FormData) => {
 };
 
 export default function LoginTemplate() {
-
   return (
     <>
       <section className="w-full md:w-full h-screen md:h-fit flex flex-col md:flex-row bg-white">
@@ -73,12 +72,13 @@ export default function LoginTemplate() {
             Silahkan masukkan email dan password
           </p>
           <form action={handleLogin}>
-            <InputBox name="email" type="text" label="Email" />
-            <InputBox name="password" type="password" label="Password" />
-
+            <div className="flex flex-col gap-3.5 mt-3.5">
+              <InputBox name="email" type="text" label="Email" />
+              <InputBox name="password" type="password" label="Password" />
+            </div>
             <button
               type="submit"
-              className="mt-4 bg-accent-700 rounded-lg p-2 text-white font-semibold hover:bg-accent-800 transition-colors duration-300 ease-out"
+              className="mt-4 bg-accent-700 rounded-lg p-2 text-white font-semibold hover:bg-accent-800 transition-colors duration-300 ease-out w-full"
             >
               Masuk
             </button>
