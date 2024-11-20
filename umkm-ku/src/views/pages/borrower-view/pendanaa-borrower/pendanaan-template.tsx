@@ -3,6 +3,7 @@ import InputForm from "../../public-view/input-form";
 import TextAreaForm from "../../public-view/textarea-form";
 import CarouselHome from "../carousel";
 import { revalidatePath } from "next/cache";
+import { cookies } from "next/headers";
 
 export default function PendanaanTemplate() {
   const slide = [
@@ -30,10 +31,10 @@ export default function PendanaanTemplate() {
         body: JSON.stringify(input),
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${cookies().get("access_token")?.value}`,
         },
       }
     );
-    console.log(response);
     // if (!response.ok) throw Error("Error adding data");
     if (response) {
       revalidatePath("/borrower/list-pendanaan/ajukan-pendanaan");
