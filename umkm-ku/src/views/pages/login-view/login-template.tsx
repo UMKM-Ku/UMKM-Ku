@@ -31,7 +31,7 @@ const handleLogin = async (FormData: FormData) => {
   );
 
   if (!response.ok) throw Error("Error adding data");
-
+  
   const token: string | undefined = response.headers
     .get("set-cookie")
     ?.split("=")[1]
@@ -44,6 +44,7 @@ const handleLogin = async (FormData: FormData) => {
 };
 
 export default function LoginTemplate() {
+
   return (
     <>
       <section className="w-full md:w-full h-screen md:h-fit flex flex-col md:flex-row bg-white">

@@ -1,6 +1,6 @@
 import BorrowerFaq from "./borower-faq";
 import BorrowerCard from "./borrower-card";
-import BorrowerCardNews from "./borrower-card-news";
+import BorrowerCardNews from "./card-news";
 import CarouselHome from "./carousel";
 
 export default function BorrowerPage() {
