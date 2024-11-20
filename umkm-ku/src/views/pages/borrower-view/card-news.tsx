@@ -40,9 +40,9 @@ export default async function BorrowerCardNews() {
           <Link
             href={item.link}
             key={index}
-            className="flex bg-white shadow-lg rounded-lg overflow-hidden p-4 w-[80%] border-2"
+            className="flex bg-white rounded-lg overflow-hidden p-4 w-[80%] border-2 hover:shadow-xl duration-300 ease-out transition-shadow"
           >
-            <div className="flex ">
+            <div className="flex w-full">
               <img
                 src={item.thumbnail || "https://via.placeholder.com/100"}
                 alt={item.title}

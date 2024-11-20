@@ -29,12 +29,6 @@ export default function LoginTemplate() {
   //   // };
   // };
 
-  const token =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im11bHlvbm9pbmRvbmVzaWFAZ21haWwuY29tIiwicm9sZSI6IkJvcnJvd2VyIiwiaWF0IjoxNzMyMDI4NjI1LCJleHAiOjE3MzIwMzIyMjV9.yVA4wafXfRpiOAgvczCWmHWNyv7JckpdHOIbxnQrjR4";
-  const decoded = jwtDecode(token);
-
-  console.log(decoded);
-
   return (
     <>
       <section className="w-full md:w-full h-screen md:h-fit flex flex-col md:flex-row bg-white">
