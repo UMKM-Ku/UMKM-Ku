@@ -1,4 +1,5 @@
 import InputForm from "../../public-view/input-form";
+import TextAreaForm from "../../public-view/textarea-form";
 import CarouselHome from "../carousel";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 
@@ -30,17 +31,22 @@ export default function PendanaanTemplate() {
           </p>
         </div>
         <form className="my-10">
+          <InputForm label="Nama Pendanaan *" name="title" type="text" />
+          <TextAreaForm
+            label="Deskripsi Penggunaan Dana *"
+            name="description"
+          />
           <InputForm
             label="Modal yang diperlukan *"
-            name="modalDiperlukan"
+            name="totalFund"
             type="text"
           />
           <InputForm label="Tenor *" name="tenor" type="number" />
-          <InputForm label="Bagi Hasil *" name="bagiHasil" type="number" />
+          <InputForm label="Bagi Hasil *" name="returnRate" type="number" />
           <div className="relative w-full">
             <label className="font-bold">Sektor Usaha*</label>
             <select
-              name="sektorUsaha"
+              name="sektorId"
               className="block appearance-none w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500"
             >
               <option value="">Pilih Sektor Usaha</option>
@@ -53,12 +59,7 @@ export default function PendanaanTemplate() {
               <option value="Food and Beverage">Food and Beverage</option>
             </select>
           </div>
-          <InputForm
-            label="Deskripsi Penggunaan Dana *"
-            name="deskripsiPenggunaanDana"
-            type="text"
-          />
-          <InputForm label="Foto KTP *" name="fotoKTP" type="file" />
+          <InputForm label="Foto Pendanaan *" name="image" type="file" />
           <div className="flex justify-center">
             <button
               type="submit"
