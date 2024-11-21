@@ -14,6 +14,7 @@ export default function PendanaanTemplate() {
   const ajukanPendanaan = async (formData: FormData) => {
     "use server";
 
+
     // const input = {
     //   title: formData.get("title"),
     //   description: formData.get("description"),
@@ -55,6 +56,7 @@ export default function PendanaanTemplate() {
     //   }
     // };
     const token: string | undefined = cookies().get("access_token")?.value;
+
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_API_URL}/borrower/create`,
       {
@@ -76,6 +78,7 @@ export default function PendanaanTemplate() {
         message: errorMessage,
       });
       return;
+
     }
 
     console.log("Request successful:", await response.json());

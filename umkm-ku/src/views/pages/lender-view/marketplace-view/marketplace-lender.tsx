@@ -1,34 +1,29 @@
-import CardMarketplace from "./card-marketplace";
+// import CardMarketplace from "./card-marketplace";
 import FilterCheckbox from "./filter-checkbox";
 import { cookies } from "next/headers";
 import { Funding } from "@/views/_types";
+import Link from "next/link";
+import CardMarketplace from "./card-marketplace";
 
 const MarketplaceLender = async () => {
-  const fetchDataFunding = async () => {
-    try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_API_URL}/lender/fundings`,
-        {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${cookies().get("access_token")?.value}`,
-          },
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Failed to fetch data");
+  const fetchData = async () => {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_API_URL}/lender/fundings`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${cookies().get("access_token")?.value}`,
+        },
       }
+    );
 
-      const data = await response.json();
-      const fund = data.fundingRequests || [];
-      return fund;
-    } catch (error) {
-      console.error("Error fetching funding data:", error);
-    }
+    const data = await response.json();
+    const fundingData = data.fundingRequests || [];
+
+    return fundingData;
   };
 
-  const funding = await fetchDataFunding();
+  const funding = await fetchData();
 
   return (
     <>
@@ -75,17 +70,19 @@ const MarketplaceLender = async () => {
             {funding &&
               funding.map((el: Funding, index: number) => {
                 return (
-                  <CardMarketplace
-                    key={index}
-                    name={el.title}
-                    description={el.sectorId}
-                    amount={el.totalFund}
-                    tenor={el.tenor}
-                    profitSharing={el.returnRate}
-                    crowdfundingProgress={70}
-                    daysLeft={2}
-                    imageSrc="https://images.unsplash.com/photo-1527580477540-6ef8bc65b8a3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  />
+                  <Link href={`/lender/marketplace/${el.id}`}>
+                    <CardMarketplace
+                      key={index}
+                      name={el.title}
+                      description={el.sectorId}
+                      amount={el.totalFund}
+                      tenor={el.tenor}
+                      profitSharing={el.returnRate}
+                      crowdfundingProgress={70}
+                      daysLeft={2}
+                      imageSrc={el.image}
+                    />
+                  </Link>
                 );
               })}
           </div>
