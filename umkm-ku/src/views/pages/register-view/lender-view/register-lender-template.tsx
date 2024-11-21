@@ -1,4 +1,4 @@
-import RegisterBox from "@/views/pages/register-view/borrower-view/components/register-box";
+import RegisterBox from "../borrower-view/components/register-box";
 
 export default function RegisterLenderTemplate() {
   return (
@@ -9,6 +9,7 @@ export default function RegisterLenderTemplate() {
         desc2="UMKM yang membutuhkan modal untuk berkembang."
         label1="Register Lender"
         label2="Buat akun untuk mengakses sebagai pemberi pendanaan"
+        role="Lender"
       />
     </>
   );

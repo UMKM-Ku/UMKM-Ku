@@ -1,5 +1,7 @@
 import InputBox from "@/views/pages/login-view/input-box";
+
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default function RegisterBox({
   link,
@@ -7,13 +9,48 @@ export default function RegisterBox({
   desc2,
   label1,
   label2,
+  role,
 }: {
   link: string;
   desc1: string;
   desc2: string;
   label1: string;
   label2: string;
+  role: string;
 }) {
+  const handleRegister = async (FormData: FormData) => {
+    "use server";
+
+    const input = {
+      name: FormData.get("name"),
+      email: FormData.get("email"),
+      password: FormData.get("password"),
+      phoneNumber: FormData.get("phoneNumber"),
+      role: role === "Borrower" ? "Borrower" : "Lender",
+    };
+
+    console.log(input);
+
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_API_URL}/auth/register/user`,
+      {
+        method: "POST",
+        body: JSON.stringify(input),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (!response.ok) throw Error("Error Login");
+    const data = await response.json();
+
+    console.log(data);
+
+    console.log(response);
+    if (response.ok) redirect("/login");
+  };
+
   return (
     <>
       <section className="w-full md:w-full h-screen md:h-fit flex flex-col md:flex-row bg-white">
@@ -38,16 +75,20 @@ export default function RegisterBox({
             {label1}
           </h6>
           <p className="text-gray-600 mt-2 text-sm md:text-base">{label2}</p>
-          <div className="flex flex-col gap-3.5 mt-3.5">
-            <InputBox name="email" type="text" label="Email" />
-            <InputBox name="password" type="password" label="Password" />
-          </div>
-          <button
-            type="submit"
-            className="mt-4 bg-accent-700 rounded-lg p-2 text-white font-semibold hover:bg-accent-800 transition-colors duration-300 ease-out"
-          >
-            Daftarkan Akun
-          </button>
+          <form action={handleRegister}>
+            <div className="flex flex-col gap-3.5 mt-3.5">
+              <InputBox name="name" type="text" label="Name" />
+              <InputBox name="email" type="text" label="Email" />
+              <InputBox name="password" type="password" label="Password" />
+              <InputBox name="phoneNumber" type="number" label="Phone Number" />
+            </div>
+            <button
+              type="submit"
+              className="mt-4 bg-accent-700 rounded-lg p-2 text-white font-semibold hover:bg-accent-800 transition-colors duration-300 ease-out w-full"
+            >
+              Daftarkan Akun
+            </button>
+          </form>
 
           <h6 className="text-gray-700 text-sm mt-2 text-center">
             Sudah punya akun?

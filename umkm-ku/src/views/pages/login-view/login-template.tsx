@@ -47,7 +47,9 @@ const handleLogin = async (FormData: FormData) => {
 
   if (token) {
     const decoded = jwtDecode<TokenPayload>(token);
-    decoded.role === "Borrower" ? redirect("/borrower") : redirect("/lender");
+    decoded.role === "Borrower"
+      ? redirect("/register/borrower/information")
+      : redirect("register/lender/information");
   }
 };
 
