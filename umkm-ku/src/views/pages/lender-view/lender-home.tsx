@@ -1,16 +1,17 @@
 import BorrowerCardNews from "../borrower-view/card-news";
 import LenderFaq from "./lender-faq";
 import CarouselHome from "../borrower-view/carousel";
-import { GiWallet } from "react-icons/gi";
+import { GiWallet, GiProfit } from "react-icons/gi";
 import { FaMoneyBills } from "react-icons/fa6";
-import { GiProfit } from "react-icons/gi";
 import { AiFillFund } from "react-icons/ai";
+import TopUp from "./topup-view/topup";
 
 export default function LenderHome() {
   const slide = [
     "https://i.imgur.com/pyQxQCe.png",
     "https://i.imgur.com/JZjhhdW.png",
   ];
+
   return (
     <>
       {/* Header Banner */}
@@ -34,12 +35,12 @@ export default function LenderHome() {
                 <h4 className="text-accent-700 font-semibold text-lg">Rp. 0</h4>
               </div>
             </div>
-            <button
-              type="button"
-              className="mt-5 border-2 w-full py-2 rounded-md border-accent-600 text-accent-700 hover:bg-accent-700 hover:text-white transition-colors duration-300 ease-in-out font-semibold"
+            <label
+              htmlFor="topup-modal"
+              className="mt-5 border-2 w-full py-2 rounded-md border-accent-600 text-accent-700 hover:bg-accent-700 hover:text-white transition-colors duration-300 ease-in-out font-semibold text-center cursor-pointer"
             >
               Top Up Dana
-            </button>
+            </label>
           </div>
 
           {/* Asetku */}
@@ -76,6 +77,9 @@ export default function LenderHome() {
           </div>
         </div>
       </section>
+
+      {/* Modal Top Up */}
+      <TopUp />
 
       {/* Berita Terkini Section */}
       <h2 className="text-center text-2xl font-bold my-8 text-gray-600">
