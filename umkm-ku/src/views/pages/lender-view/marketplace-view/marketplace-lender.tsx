@@ -78,9 +78,10 @@ const MarketplaceLender = async () => {
                       amount={el.totalFund}
                       tenor={el.tenor}
                       profitSharing={el.returnRate}
-                      crowdfundingProgress={70}
-                      daysLeft={2}
+                      crowdfundingProgress={el.fundsRaised}
+                      daysLeft={el.totalFund}
                       imageSrc={el.image}
+                      params={el.id}
                     />
                   </Link>
                 );
