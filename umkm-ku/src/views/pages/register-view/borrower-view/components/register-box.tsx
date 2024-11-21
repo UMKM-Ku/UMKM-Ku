@@ -9,12 +9,14 @@ export default function RegisterBox({
   desc2,
   label1,
   label2,
+  role,
 }: {
   link: string;
   desc1: string;
   desc2: string;
   label1: string;
   label2: string;
+  role: string;
 }) {
   const handleRegister = async (FormData: FormData) => {
     "use server";
@@ -24,7 +26,7 @@ export default function RegisterBox({
       email: FormData.get("email"),
       password: FormData.get("password"),
       phoneNumber: FormData.get("phoneNumber"),
-      role: "Borrower",
+      role: role === "Borrower" ? "Borrower" : "Lender",
     };
 
     console.log(input);
