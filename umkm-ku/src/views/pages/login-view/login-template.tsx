@@ -42,7 +42,7 @@ const handleLogin = async (FormData: FormData) => {
     sameSite: "strict",
   });
 
-  const accessToken = cookies().get("access_token")?.value.split(".")[0];
+  const accessToken = cookies().get("access_token")?.value;
   console.log("Access Token:", accessToken);
 
   if (token) {
