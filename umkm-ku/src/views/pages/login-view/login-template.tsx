@@ -42,6 +42,9 @@ const handleLogin = async (FormData: FormData) => {
     sameSite: "strict",
   });
 
+  const accessToken = cookies().get("access_token")?.value;
+  console.log("Access Token:", accessToken);
+
   if (token) {
     const decoded = jwtDecode<TokenPayload>(token);
     decoded.role === "Borrower"
