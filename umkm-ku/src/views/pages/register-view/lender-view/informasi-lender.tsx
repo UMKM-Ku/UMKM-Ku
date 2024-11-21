@@ -3,33 +3,34 @@ import ButtonForm from "../../public-view/button-form";
 import InputForm from "../../public-view/input-form";
 import PersyaratanForm from "../../public-view/persyaratan-form";
 import TextAreaForm from "../../public-view/textarea-form";
+import { cookies } from "next/headers";
 
 const InformasiLender = () => {
   const handleDetail = async (FormData: FormData) => {
     "use server";
 
     const input = {
-      address: FormData.get("name"),
-      email: FormData.get("email"),
-      password: FormData.get("password"),
-      phoneNumber: FormData.get("phoneNumber"),
-      role: "Lender",
+      address: FormData.get("address"),
+      identityNumber: FormData.get("identityNumber"),
+      accountNumber: FormData.get("accountNumber"),
+      birthDate: FormData.get("birthDate"),
     };
 
     console.log(input);
 
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_API_URL}/auth/register/user`,
+      `${process.env.NEXT_PUBLIC_BASE_API_URL}/auth/register/lender`,
       {
         method: "POST",
         body: JSON.stringify(input),
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${cookies().get("access_token")?.value}`,
         },
       }
     );
 
-    if (!response.ok) throw Error("Error pengisian form");
+    if (!response.ok) throw Error("Error pengisian form register lender");
     const data = await response.json();
 
     console.log(data);

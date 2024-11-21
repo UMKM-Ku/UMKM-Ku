@@ -9,20 +9,15 @@ const InformasiBorrower = ({ badanUsaha }: { badanUsaha: string }) => {
     "use server";
 
     const input = {
-      name: FormData.get("name"),
-      email: FormData.get("email"),
-      password: FormData.get("password"),
-      identityNumber: FormData.get("identityNumber"),
       address: FormData.get("address"),
+      identityNumber: FormData.get("identityNumber"),
+      accountNumber: FormData.get("accountNumber"),
       npwp: FormData.get("npwp"),
       isInstitution: `${badanUsaha !== "institusi" ? false : true}`,
-      accountNumber: FormData.get("accountNumber"),
-      phoneNumber: FormData.get("phoneNumber"),
-      identityCard: FormData.get("identityCard"),
     };
 
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_API_URL}/register/borrower`,
+      `${process.env.NEXT_PUBLIC_BASE_API_URL}/auth/register/borrower`,
       {
         method: "POST",
         body: JSON.stringify(input),
@@ -33,7 +28,7 @@ const InformasiBorrower = ({ badanUsaha }: { badanUsaha: string }) => {
     );
 
     // if (!response.ok) throw Error("Error adding data");
-    return redirect("/login");
+    return redirect("/borrower");
   };
 
   return (
@@ -50,15 +45,10 @@ const InformasiBorrower = ({ badanUsaha }: { badanUsaha: string }) => {
         className="bg-white shadow-lg rounded-lg p-6"
         action={registerBorrower}
       >
-        <InputForm label="Nama Lengkap *" name="name" type="text" />
-        <InputForm label="Alamat Email *" name="email" type="email" />
-        <InputForm label="Password *" name="password" type="password" />
         <TextAreaForm label="Alamat *" name="address" />
-        <InputForm label="No Handphone *" name="phoneNumber" type="number" />
         <InputForm label="No KTP *" name="identityNumber" type="number" />
         <InputForm label="No Rekening *" name="accountNumber" type="number" />
         <InputForm label="NPWP *" name="npwp" type="number" />
-        <InputForm label="Foto KTP *" name="identityCard" type="file" />
         <PersyaratanForm />
         <ButtonForm />
       </form>
