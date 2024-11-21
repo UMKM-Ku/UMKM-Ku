@@ -1,35 +1,28 @@
-import CardMarketplace from "./card-marketplace";
+// import CardMarketplace from "./card-marketplace";
 import FilterCheckbox from "./filter-checkbox";
 import { cookies } from "next/headers";
 import { Funding } from "@/views/_types";
 import Link from "next/link";
 
+
 const MarketplaceLender = async () => {
-  const fetchDataFunding = async () => {
-    try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_API_URL}/lender/fundings`,
-        {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${cookies().get("access_token")?.value}`,
-          },
-        }
-      );
+  // const fetchData = async () => {
+  //   const response = await fetch(
+  //     `${process.env.NEXT_PUBLIC_BASE_API_URL}/lender/fundings`,
+  //     {
+  //       method: "GET",
+  //       headers: {
+  //         Authorization: `Bearer ${cookies().get("access_token")?.value}`,
+  //       },
+  //     }
+  //   );
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch data");
-      }
+  //   const data = await response.json();
 
-      const data = await response.json();
-      const fund = data.fundingRequests || [];
-      return fund;
-    } catch (error) {
-      console.error("Error fetching funding data:", error);
-    }
-  };
+  //   return data;
+  // };
 
-  const funding = await fetchDataFunding();
+  // const funding = await fetchData();
 
   return (
     <>
@@ -91,6 +84,7 @@ const MarketplaceLender = async () => {
                   </Link>
                 );
               })}
+
           </div>
           <div className="flex justify-end mb-5 me-7">
             <div className="join">
