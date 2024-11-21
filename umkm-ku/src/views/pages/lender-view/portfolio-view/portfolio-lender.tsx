@@ -1,6 +1,7 @@
 import React from "react";
 import { CardPortfolio } from "./card-portfolio";
 import { GiWallet } from "react-icons/gi";
+import TopUp from "../topup-view/topup";
 
 export default function PortfolioLender() {
   const portfolioData = {
@@ -63,24 +64,24 @@ export default function PortfolioLender() {
         {/* Right Section - Balance and Contribution */}
         <div className="w-full md:w-1/3 flex flex-col gap-6">
           {/* Balance Card */}
-          <div className="p-4 md:p-6 gap-5 border-2 rounded-md">
-            <div className="flex gap-5 items-center">
+          <div className="p-8 gap-5 border-2 w-full  rounded-md flex items-center md:flex-col md:items-start md:justify-center">
+            <div className="flex gap-5 items-center md:flex-row md:items-center md:justify-center">
               <div className="p-4 bg-accent-600 rounded-lg">
-                <GiWallet className="text-white text-3xl md:text-4xl" />
+                <GiWallet className="text-white text-5xl" />
               </div>
-              <div>
-                <h4 className="text-base md:text-lg font-semibold">Saldoku</h4>
-                <h4 className="text-accent-700 font-semibold text-base md:text-lg">
-                  Rp. 0
+              <div className="md:flex md:flex-col md:items-start md:justify-center">
+                <h4 className="text-lg font-semibold text-gray-600">Saldoku</h4>
+                <h4 className="text-accent-700 font-semibold text-lg">
+                  Rp. 2.000.000
                 </h4>
               </div>
             </div>
-            <button
-              type="button"
-              className="mt-5 border-2 w-full py-2 rounded-md border-accent-600 text-accent-700 hover:bg-accent-700 hover:text-white transition-colors duration-300 ease-in-out font-semibold"
+            <label
+              htmlFor="topup-modal"
+              className="mt-5 border-2 w-full py-2 rounded-md border-accent-600 text-accent-700 hover:bg-accent-700 hover:text-white transition-colors duration-300 ease-in-out font-semibold text-center cursor-pointer"
             >
               Top Up Dana
-            </button>
+            </label>
           </div>
 
           {/* Contribution Card */}
@@ -111,7 +112,8 @@ export default function PortfolioLender() {
           </div>
         </div>
       </div>
-
+      {/* Modal Top Up */}
+      <TopUp />
       {/* Partner Data Section */}
       <div className="mt-6 bg-white rounded-lg shadow p-4 md:p-6">
         <h2 className="text-xl md:text-2xl font-bold mb-4">Data Mitra</h2>
