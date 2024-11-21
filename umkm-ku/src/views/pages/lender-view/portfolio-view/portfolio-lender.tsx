@@ -71,7 +71,9 @@ export default function PortfolioLender() {
               </div>
               <div className="md:flex md:flex-col md:items-start md:justify-center">
                 <h4 className="text-lg font-semibold text-gray-600">Saldoku</h4>
-                <h4 className="text-accent-700 font-semibold text-lg">Rp. 0</h4>
+                <h4 className="text-accent-700 font-semibold text-lg">
+                  Rp. 2.000.000
+                </h4>
               </div>
             </div>
             <label
