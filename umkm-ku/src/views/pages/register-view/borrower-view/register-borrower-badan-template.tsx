@@ -9,8 +9,9 @@ export default function RegisterBorrowerBadanTemplate() {
           <RegisterBorrowerBadan />
           <Link
             href={"/register/borrower/information/badan-usaha/form-institusi"}
+            className=" border-2 py-7 px-6 rounded-md shadow-md mt-7 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 cursor-pointer hover:border-accent-700 hover:border-2 duration-300 ease-out transition-colors"
           >
-            <div className="flex flex-col sm:flex-row gap-7 items-center border-2 py-7 px-6 rounded-md shadow-md mt-7 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 cursor-pointer hover:border-accent-700 hover:border-2 duration-300 ease-out transition-colors">
+            <div className="flex flex-col sm:flex-row gap-7 items-center">
               <img
                 src="https://i.imgur.com/KfDjX98.png"
                 alt="icon"
@@ -29,8 +30,9 @@ export default function RegisterBorrowerBadanTemplate() {
           </Link>
           <Link
             href={"/register/borrower/information/badan-usaha/form-individu"}
+            className="border-2 p-4 rounded-md shadow-md mt-7 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 cursor-pointer hover:border-accent-700 hover:border-2 duration-300 ease-out transition-colors"
           >
-            <div className="flex flex-col sm:flex-row gap-3 items-center border-2 p-4 rounded-md shadow-md mt-7 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 cursor-pointer hover:border-accent-700 hover:border-2 duration-300 ease-out transition-colors">
+            <div className="flex flex-col sm:flex-row gap-3 items-center ">
               <img
                 src="https://i.imgur.com/2xbbHeS.png"
                 alt="icon"
