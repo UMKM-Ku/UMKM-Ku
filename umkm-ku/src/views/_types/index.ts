@@ -1,4 +1,4 @@
-export type fundings = {
+export type Funding = {
   id: number;
   borrowerId: number;
   title: string;
