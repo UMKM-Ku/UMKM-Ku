@@ -1,9 +1,9 @@
-import RegisterBox from "@/views/pages/register-view/borrower-view/components/register-box";
+import RegisterBorrowerBox from "./components/register-borrower-box";
 
 export default function RegisterBorrowerTemplate() {
   return (
     <>
-      <RegisterBox
+      <RegisterBorrowerBox
         link="https://i.imgur.com/4mk7oIl.png"
         desc1="Para pemberi dana sedang menunggu anda untuk membantu mendanai"
         desc2="para UMKM yang membutuhkan modal untuk berkembang."

@@ -11,35 +11,75 @@ export default function PendanaanTemplate() {
     "https://i.imgur.com/pyQxQCe.png",
   ];
 
-  const ajukanPendanaan = async (FormData: FormData) => {
+  const ajukanPendanaan = async (formData: FormData) => {
     "use server";
 
-    const input = {
-      title: FormData.get("title"),
-      description: FormData.get("description"),
-      totalFund: FormData.get("totalFund"),
-      tenor: FormData.get("tenor"),
-      returnRate: FormData.get("returnRate"),
-      sectorId: FormData.get("sectorId"),
-      image: FormData.get("image"),
-    };
-    console.log(input);
+    // const input = {
+    //   title: formData.get("title"),
+    //   description: formData.get("description"),
+    //   totalFund: formData.get("totalFund"),
+    //   tenor: formData.get("tenor"),
+    //   returnRate: formData.get("returnRate"),
+    //   sectorId: formData.get("sectorId"),
+    //   image: formData.get("image"),
+    // };
+    // console.log(input);
+
+    const input = Object.fromEntries(formData);
+    const newFormData = new FormData();
+    newFormData.append("title", input.title);
+    newFormData.append("description", input.description);
+    newFormData.append("totalFund", input.totalFund);
+    newFormData.append("tenor", input.tenor);
+    newFormData.append("returnRate", input.returnRate);
+    newFormData.append("sectorId", input.sectorId);
+    newFormData.append("image", input.image);
+    // const newHeaders = newFormData.getHeaders()
+    //   const response = await fetch(
+    //     `${process.env.NEXT_PUBLIC_BASE_API_URL}/borrower/create`,
+    //     {
+    //       method: "POST",
+    //       body: JSON.stringify(input),
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //         Authorization: `Bearer ${cookies().get("access_token")?.value}`,
+    //       },
+    //     }
+    //   );
+    //   console.log(cookies().get("access_token")?.value);
+    //   console.log(response);
+    //   // if (!response.ok) throw Error("Error adding data");
+    //   if (response) {
+    //     revalidatePath("/borrower/list-pendanaan");
+    //     redirect("/borrower/list-pendanaan");
+    //   }
+    // };
+    const token: string | undefined = cookies().get("access_token")?.value;
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_API_URL}/borrower/create`,
       {
         method: "POST",
-        body: JSON.stringify(input),
+        body: newFormData,
         headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${cookies().get("access_token")?.value}`,
+          // "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${token}`,
         },
       }
     );
-    // if (!response.ok) throw Error("Error adding data");
-    if (response) {
-      revalidatePath("/borrower/list-pendanaan/ajukan-pendanaan");
-      redirect("/borrower/list-pendanaan/ajukan-pendanaan");
+
+    if (!response.ok) {
+      // Try to parse the error message
+      const errorMessage = await response.text();
+      console.error("Error Response:", {
+        status: response.status,
+        statusText: response.statusText,
+        message: errorMessage,
+      });
+      return;
     }
+
+    console.log("Request successful:", await response.json());
+    redirect("/borrower/list-pendanaan");
   };
 
   return (
