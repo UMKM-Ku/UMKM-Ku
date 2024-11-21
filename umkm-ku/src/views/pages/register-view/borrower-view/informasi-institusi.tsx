@@ -3,7 +3,7 @@ import InputForm from "../../public-view/input-form";
 import PersyaratanForm from "../../public-view/persyaratan-form";
 import TextAreaForm from "../../public-view/textarea-form";
 
-const InformasiInstitusi = () => {
+const InformasiInstitusi = ({ badanUsaha }: { badanUsaha: string }) => {
   return (
     <div className="md:w-6/12 md:mx-auto mt-16 mb-10 min-h-screen mx-9">
       <div className="text-center">
