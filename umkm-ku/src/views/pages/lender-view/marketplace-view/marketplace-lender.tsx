@@ -1,34 +1,26 @@
-import CardMarketplace from "./card-marketplace";
+// import CardMarketplace from "./card-marketplace";
 import FilterCheckbox from "./filter-checkbox";
-import { cookies } from "next/headers";
-import { Funding } from "@/views/_types";
+// import { cookies } from "next/headers";
+// import { Funding } from "@/views/_types";
 
 const MarketplaceLender = async () => {
-  const fetchDataFunding = async () => {
-    try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_API_URL}/lender/fundings`,
-        {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${cookies().get("access_token")?.value}`,
-          },
-        }
-      );
+  // const fetchData = async () => {
+  //   const response = await fetch(
+  //     `${process.env.NEXT_PUBLIC_BASE_API_URL}/lender/fundings`,
+  //     {
+  //       method: "GET",
+  //       headers: {
+  //         Authorization: `Bearer ${cookies().get("access_token")?.value}`,
+  //       },
+  //     }
+  //   );
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch data");
-      }
+  //   const data = await response.json();
 
-      const data = await response.json();
-      const fund = data.fundingRequests || [];
-      return fund;
-    } catch (error) {
-      console.error("Error fetching funding data:", error);
-    }
-  };
+  //   return data;
+  // };
 
-  const funding = await fetchDataFunding();
+  // const funding = await fetchData();
 
   return (
     <>
@@ -72,10 +64,7 @@ const MarketplaceLender = async () => {
         </aside>
         <div>
           <div className="grid md:grid-cols-2 gap-x-16 mt-16">
-            {funding &&
-              funding.map((el: Funding, index: number) => {
-                return (
-                  <CardMarketplace
+            {/* <CardMarketplace
                     key={index}
                     name={el.title}
                     description={el.sectorId}
@@ -84,10 +73,8 @@ const MarketplaceLender = async () => {
                     profitSharing={el.returnRate}
                     crowdfundingProgress={70}
                     daysLeft={2}
-                    imageSrc="https://images.unsplash.com/photo-1527580477540-6ef8bc65b8a3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  />
-                );
-              })}
+                    imageSrc={el.image}
+                  /> */}
           </div>
           <div className="flex justify-end mb-5 me-7">
             <div className="join">
