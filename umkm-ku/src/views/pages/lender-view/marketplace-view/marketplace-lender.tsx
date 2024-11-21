@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 const MarketplaceLender = () => {
   const dispatch: AppDispatch = useDispatch();
   const { fundings } = useAppSelector((state) => state.lenderSlice);
+  console.log(fundings);
 
   useEffect(() => {
     dispatch(fetchDataFunding());
