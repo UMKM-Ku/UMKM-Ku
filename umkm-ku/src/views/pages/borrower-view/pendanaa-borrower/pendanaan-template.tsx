@@ -23,7 +23,7 @@ export default function PendanaanTemplate() {
       sectorId: FormData.get("sectorId"),
       image: FormData.get("image"),
     };
-    console.log(input);
+
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_API_URL}/borrower/create`,
       {
@@ -35,7 +35,7 @@ export default function PendanaanTemplate() {
         },
       }
     );
-    // if (!response.ok) throw Error("Error adding data");
+
     if (response) {
       revalidatePath("/borrower/list-pendanaan/ajukan-pendanaan");
       redirect("/borrower/list-pendanaan/ajukan-pendanaan");
