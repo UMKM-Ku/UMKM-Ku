@@ -2,6 +2,7 @@ import CardMarketplace from "./card-marketplace";
 import FilterCheckbox from "./filter-checkbox";
 import { cookies } from "next/headers";
 import { Funding } from "@/views/_types";
+import Link from "next/link";
 
 const MarketplaceLender = async () => {
   const fetchDataFunding = async () => {
@@ -75,17 +76,19 @@ const MarketplaceLender = async () => {
             {funding &&
               funding.map((el: Funding, index: number) => {
                 return (
-                  <CardMarketplace
-                    key={index}
-                    name={el.title}
-                    description={el.sectorId}
-                    amount={el.totalFund}
-                    tenor={el.tenor}
-                    profitSharing={el.returnRate}
-                    crowdfundingProgress={70}
-                    daysLeft={2}
-                    imageSrc="https://images.unsplash.com/photo-1527580477540-6ef8bc65b8a3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  />
+                  <Link href={`/lender/marketplace/${el.id}`}>
+                    <CardMarketplace
+                      key={index}
+                      name={el.title}
+                      description={el.sectorId}
+                      amount={el.totalFund}
+                      tenor={el.tenor}
+                      profitSharing={el.returnRate}
+                      crowdfundingProgress={70}
+                      daysLeft={2}
+                      imageSrc="https://images.unsplash.com/photo-1527580477540-6ef8bc65b8a3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    />
+                  </Link>
                 );
               })}
           </div>
