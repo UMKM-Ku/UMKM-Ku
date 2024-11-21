@@ -3,26 +3,27 @@ import FilterCheckbox from "./filter-checkbox";
 import { cookies } from "next/headers";
 import { Funding } from "@/views/_types";
 import Link from "next/link";
-
+import CardMarketplace from "./card-marketplace";
 
 const MarketplaceLender = async () => {
-  // const fetchData = async () => {
-  //   const response = await fetch(
-  //     `${process.env.NEXT_PUBLIC_BASE_API_URL}/lender/fundings`,
-  //     {
-  //       method: "GET",
-  //       headers: {
-  //         Authorization: `Bearer ${cookies().get("access_token")?.value}`,
-  //       },
-  //     }
-  //   );
+  const fetchData = async () => {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_API_URL}/lender/fundings`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${cookies().get("access_token")?.value}`,
+        },
+      }
+    );
 
-  //   const data = await response.json();
+    const data = await response.json();
+    const fundingData = data.fundingRequests || [];
 
-  //   return data;
-  // };
+    return fundingData;
+  };
 
-  // const funding = await fetchData();
+  const funding = await fetchData();
 
   return (
     <>
@@ -79,12 +80,11 @@ const MarketplaceLender = async () => {
                       profitSharing={el.returnRate}
                       crowdfundingProgress={70}
                       daysLeft={2}
-                      imageSrc="https://images.unsplash.com/photo-1527580477540-6ef8bc65b8a3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      imageSrc={el.image}
                     />
                   </Link>
                 );
               })}
-
           </div>
           <div className="flex justify-end mb-5 me-7">
             <div className="join">
