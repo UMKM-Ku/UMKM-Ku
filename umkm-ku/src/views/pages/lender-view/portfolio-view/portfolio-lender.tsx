@@ -2,21 +2,22 @@ import React from "react";
 import { CardPortfolio } from "./card-portfolio";
 import { GiWallet } from "react-icons/gi";
 import TopUp from "../topup-view/topup";
+import Link from "next/link";
 
 export default function PortfolioLender() {
   const portfolioData = {
-    name: "Joniwarta",
+    name: "Beli Alat Kesehatan",
     status: "Berjalan",
-    remainingPrincipal: 4500000,
-    remainingMargin: 4000,
+    remainingPrincipal: 6000000,
+    remainingMargin: 30,
     progress: {
-      current: 10,
-      total: 50,
+      current: 20,
+      total: 30,
     },
-    marginPercentage: 70,
+    marginPercentage: 80,
     onTimeStatus: true,
     imageSrc:
-      "https://images.unsplash.com/photo-1527580477540-6ef8bc65b8a3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://www.medicalogy.com/blog/wp-content/uploads/2016/11/medical-device.jpg",
   };
 
   return (
@@ -29,15 +30,15 @@ export default function PortfolioLender() {
             <div className="space-y-4">
               <div className="flex justify-between border-b pb-3">
                 <span>Jumlah Pendanaan</span>
-                <span className="text-teal-600">Rp 500.000</span>
-              </div>
-              <div className="flex justify-between border-b pb-3">
-                <span>Imbal hasi selama ini</span>
                 <span className="text-teal-600">Rp 1.000.000</span>
               </div>
               <div className="flex justify-between border-b pb-3">
+                <span>Imbal hasi selama ini</span>
+                <span className="text-teal-600">Rp 750.000</span>
+              </div>
+              <div className="flex justify-between border-b pb-3">
                 <span>Jumlah penarikan dana</span>
-                <span className="text-teal-600">Rp 6.000</span>
+                <span className="text-teal-600">Rp 750.000</span>
               </div>
 
               <div className="mt-6">
@@ -45,7 +46,7 @@ export default function PortfolioLender() {
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div>
                     <div className="text-gray-500">Mitra yang didanai</div>
-                    <div className="font-bold text-teal-600">2 Mitra</div>
+                    <div className="font-bold text-teal-600">1 Mitra</div>
                   </div>
                   <div>
                     <div className="text-gray-500">Pembayaran lancar</div>
@@ -53,7 +54,7 @@ export default function PortfolioLender() {
                   </div>
                   <div>
                     <div className="text-gray-500">Pembayaran terlambat</div>
-                    <div className="font-bold text-teal-600">1 Mitra</div>
+                    <div className="font-bold text-teal-600">0 Mitra</div>
                   </div>
                 </div>
               </div>
@@ -100,7 +101,7 @@ export default function PortfolioLender() {
                     />
                   </svg>
                 </div>
-                <div>Kamu sudah memberi dampak ke 3 UMKM</div>
+                <div>Kamu sudah memberi dampak ke 1 UMKM</div>
               </div>
             </div>
             <button
@@ -118,26 +119,25 @@ export default function PortfolioLender() {
       <div className="mt-6 bg-white rounded-lg shadow p-4 md:p-6">
         <h2 className="text-xl md:text-2xl font-bold mb-4">Data Mitra</h2>
         <div className="flex gap-2 mb-6 flex-wrap">
-          <button className="px-3 md:px-4 py-1 md:py-2 border border-teal-600 text-teal-600 rounded-full text-sm md:text-base">
+          <button className="px-3 md:px-4 py-1 md:py-2 border bg-teal-600 text-white  border-teal-600  rounded-full text-sm md:text-base">
+            Semua
+          </button>
+          <button className="px-3 md:px-4 py-1 md:py-2 border-teal-600 border text-teal-600 rounded-full text-sm md:text-base">
             Tepat Waktu
           </button>
-          <button className="px-3 md:px-4 py-1 md:py-2 bg-teal-600 text-white rounded-full text-sm md:text-base">
+          <button className="px-3 md:px-4 py-1 md:py-2 border border-teal-600 text-teal-600 rounded-full text-sm md:text-base">
             Terlambat
           </button>
           <button className="px-3 md:px-4 py-1 md:py-2 border border-teal-600 text-teal-600 rounded-full text-sm md:text-base">
             Lunas
           </button>
           <button className="px-3 md:px-4 py-1 md:py-2 border border-teal-600 text-teal-600 rounded-full text-sm md:text-base">
-            Klaim Selesai
-          </button>
-          <button className="px-3 md:px-4 py-1 md:py-2 border border-teal-600 text-teal-600 rounded-full text-sm md:text-base">
-            Menunggu Pencairan
-          </button>
-          <button className="px-3 md:px-4 py-1 md:py-2 border border-teal-600 text-teal-600 rounded-full text-sm md:text-base">
-            Lainnya
+            Sedang Berjalan
           </button>
         </div>
-        <CardPortfolio {...portfolioData} />
+        <Link href={`/lender/marketplace/${12}`}>
+          <CardPortfolio {...portfolioData} />
+        </Link>
       </div>
     </div>
   );

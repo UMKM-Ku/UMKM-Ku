@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { PortfolioProps } from "./types";
-
 export const CardPortfolio: FC<PortfolioProps> = ({
   name,
   status,
@@ -29,8 +28,8 @@ export const CardPortfolio: FC<PortfolioProps> = ({
               <p className="text-sm text-accent-700">{status}</p>
             </div>
             {onTimeStatus && (
-              <span className="px-3 py-1 bg-green-100 text-green-800 rounded text-sm">
-                Tepat waktu
+              <span className="px-1 py-1 bg-green-100 text-green-800 rounded text-sm">
+                Sedang Berjalan
               </span>
             )}
           </div>
@@ -44,9 +43,9 @@ export const CardPortfolio: FC<PortfolioProps> = ({
             </span>
           </div>
           <div className="flex justify-between mb-1">
-            <span>Sisa Margin</span>
+            <span>Tenor</span>
             <span className="font-semibold">
-              Rp {remainingMargin.toLocaleString()}
+              {remainingMargin.toLocaleString()} Minggu
             </span>
           </div>
         </div>

@@ -26,8 +26,12 @@ const CardMarketplace = async ({
   params: number;
 }) => {
   const review = Math.floor(Math.random() * 5);
+
   const reviewRating = (sectorId: number) => {
     switch (sectorId) {
+      case 0:
+        return "E";
+        break;
       case 1:
         return "E";
         break;
@@ -45,32 +49,13 @@ const CardMarketplace = async ({
         break;
       default:
         return "B";
+        break;
       // code block
     }
   };
 
-  const reviewRatingColor = (sectorId: string) => {
-    switch (sectorId) {
-      case "A":
-        return "sky";
-        break;
-      case "B":
-        return "sky";
-        break;
-      case "C":
-        return "yellow";
-        break;
-      case "D":
-        return "red";
-        break;
-      case "E":
-        return "red";
-        break;
-      default:
+  // code block
 
-      // code block
-    }
-  };
   const fetchDetailLender = async (): Promise<FundingRequest> => {
     try {
       const response = await fetch(
@@ -129,8 +114,6 @@ const CardMarketplace = async ({
     }
   };
 
-  console.log(reviewRatingColor(reviewRating(review)));
-
   return (
     <>
       <div className="relative md:min-w-80  rounded-lg shadow-lg border border-gray-200 bg-white overflow-hidden m-7">
@@ -149,9 +132,7 @@ const CardMarketplace = async ({
           <div className="flex items-center space-x-2">
             <div className="avatar placeholder">
               <div
-                className={`bg-${reviewRatingColor(
-                  reviewRating(review)
-                )}-500 text-white rounded-full w-8 h-8 flex items-center justify-center`}
+                className={`bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center`}
               >
                 {reviewRating(review)}
               </div>
