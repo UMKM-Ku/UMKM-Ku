@@ -56,7 +56,7 @@ export default function LenderHome() {
                 <FaMoneyBills className="text-6xl" />
                 <div>
                   <h6>Dana yang bisa ditarik</h6>
-                  <h6>Rp. 500.000</h6>
+                  <h6>Rp. 750.000</h6>
                 </div>
               </div>
               {/* Keuntungan */}
@@ -64,7 +64,7 @@ export default function LenderHome() {
                 <GiProfit className="text-6xl" />
                 <div>
                   <h6>Keuntungan</h6>
-                  <h6>Rp. 1.500.000</h6>
+                  <h6>Rp. 750.000</h6>
                 </div>
               </div>
               {/* Pendanaan UMKM */}
@@ -72,7 +72,7 @@ export default function LenderHome() {
                 <AiFillFund className="text-6xl" />
                 <div>
                   <h6>Pendanaan UMKM</h6>
-                  <h6>5</h6>
+                  <h6>1</h6>
                 </div>
               </div>
             </div>
