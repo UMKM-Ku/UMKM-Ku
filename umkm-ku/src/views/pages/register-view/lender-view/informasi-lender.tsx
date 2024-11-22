@@ -6,31 +6,48 @@ import TextAreaForm from "../../public-view/textarea-form";
 import { cookies } from "next/headers";
 
 const InformasiLender = () => {
-  const handleDetail = async (FormData: FormData) => {
+  const handleDetail = async (formData: FormData) => {
     "use server";
 
-    const input = {
-      address: FormData.get("address"),
-      identityNumber: FormData.get("identityNumber"),
-      accountNumber: FormData.get("accountNumber"),
-      birthDate: FormData.get("birthDate"),
-    };
+    // const input = {
+    //   address: FormData.get("address"),
+    //   identityNumber: FormData.get("identityNumber"),
+    //   accountNumber: FormData.get("accountNumber"),
+    //   birthDate: FormData.get("birthDate"),
+    // };
 
-    console.log(input);
+    // console.log(input);
+    const input = Object.fromEntries(formData);
+    const newFormData = new FormData();
+    newFormData.append("address", input.address);
+    newFormData.append("identityCard", input.identityCard);
+    newFormData.append("identityNumber", input.identityNumber);
+    newFormData.append("accountNumber", input.accountNumber);
+    newFormData.append("birthDate", input.birthDate);
+    console.log(newFormData);
 
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_API_URL}/auth/register/lender`,
       {
         method: "POST",
-        body: JSON.stringify(input),
+        body: newFormData,
         headers: {
-          "Content-Type": "application/json",
+          // "Content-Type": "multi",
           Authorization: `Bearer ${cookies().get("access_token")?.value}`,
         },
       }
     );
 
-    if (!response.ok) throw Error("Error pengisian form register lender");
+    if (!response.ok) {
+      // Try to parse the error message
+      const errorMessage = await response.text();
+      console.error("Error Response:", {
+        status: response.status,
+        statusText: response.statusText,
+        message: errorMessage,
+      });
+      return;
+    }
     const data = await response.json();
 
     console.log(data);
@@ -52,6 +69,7 @@ const InformasiLender = () => {
         </div>
         <form className="my-10" action={handleDetail}>
           <TextAreaForm label="Alamat *" name="address" />
+          <InputForm label="Foto KTP *" name="identityCard" type="file" />
           <InputForm label="No KTP *" name="identityNumber" type="number" />
           <InputForm label="No Rekening *" name="accountNumber" type="number" />
           <InputForm label="Tanggal lahir *" name="birthDate" type="date" />
