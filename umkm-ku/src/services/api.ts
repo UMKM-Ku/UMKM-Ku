@@ -8,7 +8,7 @@ export const createFunding = async (
 ) => {
   try {
     const response = await fetch(
-      "https://bristle-fate-maraca.glitch.me/lender/fundings/transaction",
+      `${process.env.NEXT_PUBLIC_BASE_API_URL}/lender/fundings/transaction`,
       {
         method: "POST",
         headers: {
@@ -25,6 +25,41 @@ export const createFunding = async (
     if (!response.ok) {
       const error = await response.json();
       throw new Error(error.message || "Failed to process funding");
+    }
+
+    return await response.json();
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const createReview = async (
+  rating: number,
+  comment: string,
+  lenderId: number,
+  borrowerId: number
+) => {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_API_URL}/lender/review`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${cookies().get("access_token")?.value}`,
+        },
+        body: JSON.stringify({
+          rating,
+          comment,
+          lenderId,
+          borrowerId,
+        }),
+      }
+    );
+
+    if (!response.ok) {
+      const error = await response.json();
+      throw new Error(error.message || "Failed to process review");
     }
 
     return await response.json();
