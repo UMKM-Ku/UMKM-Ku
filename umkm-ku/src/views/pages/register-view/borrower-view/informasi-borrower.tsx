@@ -1,3 +1,4 @@
+import { cookies } from "next/headers";
 import ButtonForm from "../../public-view/button-form";
 import InputForm from "../../public-view/input-form";
 import PersyaratanForm from "../../public-view/persyaratan-form";
@@ -5,27 +6,51 @@ import TextAreaForm from "../../public-view/textarea-form";
 import { redirect } from "next/navigation";
 
 const InformasiBorrower = ({ badanUsaha }: { badanUsaha: string }) => {
-  const registerBorrower = async (FormData: FormData) => {
+  const registerBorrower = async (formData: FormData) => {
     "use server";
 
-    const input = {
-      address: FormData.get("address"),
-      identityNumber: FormData.get("identityNumber"),
-      accountNumber: FormData.get("accountNumber"),
-      npwp: FormData.get("npwp"),
-      isInstitution: `${badanUsaha !== "institusi" ? false : true}`,
-    };
+    // const input = {
+    //   address: FormData.get("address"),
+    //   identityCard: FormData.get("identityCard"),
+    //   identityNumber: FormData.get("identityNumber"),
+    //   accountNumber: FormData.get("accountNumber"),
+    //   npwp: FormData.get("npwp"),
+    //   isInstitution: `${badanUsaha !== "institusi" ? false : true}`,
+    // };
+
+    // console.log(input);
+
+    const input = Object.fromEntries(formData);
+    const newFormData = new FormData();
+    newFormData.append("address", input.address);
+    newFormData.append("identityCard", input.identityCard);
+    newFormData.append("identityNumber", input.identityNumber);
+    newFormData.append("accountNumber", input.accountNumber);
+    newFormData.append("npwp", input.npwp);
+    console.log(newFormData);
 
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_API_URL}/auth/register/borrower`,
       {
         method: "POST",
-        body: JSON.stringify(input),
+        body: newFormData,
         headers: {
-          "Content-Type": "application/json",
+          Authorization: `Bearer ${cookies().get("access_token")?.value}`,
         },
       }
     );
+    console.log(response);
+
+    if (!response.ok) {
+      // Try to parse the error message
+      const errorMessage = await response.text();
+      console.error("Error Response:", {
+        status: response.status,
+        statusText: response.statusText,
+        message: errorMessage,
+      });
+      return;
+    }
 
     // if (!response.ok) throw Error("Error adding data");
     return redirect("/borrower");
@@ -46,6 +71,7 @@ const InformasiBorrower = ({ badanUsaha }: { badanUsaha: string }) => {
         action={registerBorrower}
       >
         <TextAreaForm label="Alamat *" name="address" />
+        <InputForm label="Foto KTP *" name="identityCard" type="file" />
         <InputForm label="No KTP *" name="identityNumber" type="number" />
         <InputForm label="No Rekening *" name="accountNumber" type="number" />
         <InputForm label="NPWP *" name="npwp" type="number" />
