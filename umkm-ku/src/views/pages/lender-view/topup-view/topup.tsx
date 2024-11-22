@@ -29,6 +29,7 @@ export default function TopUp() {
         console.log("Top-up failed:", result.message);
       } else {
         console.log("Top-up successful!");
+
         revalidatePath("/lender");
         redirect("/lender");
       }
@@ -49,7 +50,34 @@ export default function TopUp() {
             ✕
           </label>
           <h3 className="text-lg font-bold">Top Up Dana</h3>
-          <p className="py-4">Masukkan jumlah top-up yang Anda inginkan:</p>
+          <p className="py-4">
+            Silahkan kirim uang melalu rekening bank dibawah ini:
+          </p>
+
+          <div className="flex gap-5 items-center">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/1280px-Bank_Central_Asia.svg.png"
+              alt="bca"
+              className="h-5"
+            />
+            <p className="text-lg">633-119-5226</p>
+          </div>
+
+          <div className="flex gap-5 items-center mt-3">
+            <img
+              src=" https://buatlogoonline.com/wp-content/uploads/2022/10/Logo-Bank-BRI.png
+"
+              alt="bri"
+              className="h-8"
+            />
+            <p className="text-lg pl-1">679-429-3726</p>
+          </div>
+
+          <p className="pt-4">
+            Masukkan jumlah top-up yang telah anda transfer, proses pengecekan
+            akan berlansung selama kurang lebih 30 menit - 1 jam
+          </p>
+
           <form action={handleTopUp}>
             <div className="form-control">
               <label className="label">
@@ -69,7 +97,7 @@ export default function TopUp() {
                 type="submit"
                 className="btn bg-accent-700 text-white w-full mt-2 text-xl hover:bg-accent-800 transition-colors duration-300 ease-in-out font-semibold text-center cursor-pointer"
               >
-                Top Up
+                Saya Sudah Bayar
               </button>
             </div>
           </form>

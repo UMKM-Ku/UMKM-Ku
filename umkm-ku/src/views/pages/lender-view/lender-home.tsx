@@ -33,7 +33,7 @@ export default function LenderHome() {
               <div className="md:flex md:flex-col md:items-start md:justify-center">
                 <h4 className="text-lg font-semibold text-gray-600">Saldoku</h4>
                 <h4 className="text-accent-700 font-semibold text-lg">
-                  Rp. 2.000.000
+                  Rp. 1.000.000
                 </h4>
               </div>
             </div>
